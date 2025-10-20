@@ -22,10 +22,32 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          900: "hsl(var(--p-900))",
+          800: "hsl(var(--p-800))",
+          700: "hsl(var(--p-700))",
+          600: "hsl(var(--p-600))",
+          500: "hsl(var(--p-500))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+          600: "hsl(var(--a-600))",
+          500: "hsl(var(--a-500))",
+          400: "hsl(var(--a-400))",
+        },
+        neutral: {
+          900: "hsl(var(--n-900))",
+          800: "hsl(var(--n-800))",
+          700: "hsl(var(--n-700))",
+          600: "hsl(var(--n-600))",
+          500: "hsl(var(--n-500))",
+          300: "hsl(var(--n-300))",
+          100: "hsl(var(--n-100))",
+          50: "hsl(var(--n-50))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -35,10 +57,6 @@ export default {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
         },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -47,16 +65,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        error: "hsl(var(--error))",
       },
       borderRadius: {
         lg: "var(--radius)",
