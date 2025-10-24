@@ -58,7 +58,7 @@ const FiveLevers = () => {
             Метод <span className="text-gradient">FiveLevers</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Пять ключевых рычагов, которые системно двигают рост вашего бизнеса
+            Пять ключевых рычагов, помогающих росту вашего бизнеса
           </p>
         </div>
         

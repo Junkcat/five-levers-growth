@@ -43,7 +43,7 @@ const Problem = () => {
               <span className="font-semibold">Решение</span>
             </div>
             <h2 className="text-4xl font-bold text-foreground mb-6">
-              Мы тянем рычаги, которые двигают P&L
+              Мы настраиваем систему роста P&L
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
               Системно работаем с пятью ключевыми рычагами роста: проводим диагностику, 

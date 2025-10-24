@@ -5,7 +5,7 @@ const phases = [
   {
     icon: Search,
     phase: "Недели 1–2",
-    title: "Diagnose",
+    title: "Discovery",
     subtitle: "Диагностика",
     description: "Экспресс-аудит 5 рычагов, базовые метрики, карта узких мест, гипотезы",
     deliverables: ["Аудит текущего состояния", "Карта узких мест", "Приоритетные гипотезы"]
@@ -21,7 +21,7 @@ const phases = [
   {
     icon: Rocket,
     phase: "Недели 6–9",
-    title: "Deliver",
+    title: "Development",
     subtitle: "Запуск MVP",
     description: "Запускаем 5–10 экспериментов по приоритетным рычагам — новый оффер, онбординг, прайс-тесты",
     deliverables: ["5-10 A/B тестов", "MVP решений", "Первые результаты"]
@@ -29,7 +29,7 @@ const phases = [
   {
     icon: TrendingUp,
     phase: "Недели 10–12",
-    title: "Drive & Develop",
+    title: "Deploy & Scale",
     subtitle: "Масштабирование",
     description: "Масштабируем сработавшее, фиксируем плейбуки, обучаем команду, план на квартал",
     deliverables: ["Плейбуки v1.0", "Обучение команды", "План на 2 квартала"]
