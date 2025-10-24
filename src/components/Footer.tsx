@@ -36,10 +36,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Контакты</h3>
             <ul className="space-y-2 text-sm text-neutral-400">
-              <li>hello@fivelevers.com</li>
-              <li>Казахстан, СНГ</li>
+              <li>
+                <a href="mailto:akolesnikov@5levers.pro" className="hover:text-white transition-colors">
+                  akolesnikov@5levers.pro
+                </a>
+              </li>
+              <li>РФ, СНГ, MENA</li>
               <li className="pt-2">
-                <a href="#telegram" className="hover:text-white transition-colors">Telegram</a> • 
+                <a href="https://t.me/askolesnikov" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Telegram</a> • 
                 <a href="#linkedin" className="hover:text-white transition-colors ml-2">LinkedIn</a>
               </li>
             </ul>

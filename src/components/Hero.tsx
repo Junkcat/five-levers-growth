@@ -1,8 +1,23 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-growth.jpg";
+import ContactDialog from "./ContactDialog";
 
 const Hero = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [requestType, setRequestType] = useState<"diagnostic" | "methodology">("diagnostic");
+
+  const handleDiagnosticClick = () => {
+    setRequestType("diagnostic");
+    setDialogOpen(true);
+  };
+
+  const handleMethodologyClick = () => {
+    setRequestType("methodology");
+    setDialogOpen(true);
+  };
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 gradient-hero opacity-95" />
@@ -32,6 +47,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
+              onClick={handleDiagnosticClick}
               className="bg-white text-primary-800 hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold"
             >
               Запросить диагностику
@@ -40,11 +56,18 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline"
+              onClick={handleMethodologyClick}
               className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8 py-6 h-auto backdrop-blur-sm"
             >
               Получить план на 12 недель
             </Button>
           </div>
+          
+          <ContactDialog 
+            open={dialogOpen} 
+            onOpenChange={setDialogOpen}
+            requestType={requestType}
+          />
           
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
             <div className="text-center">

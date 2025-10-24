@@ -51,7 +51,7 @@ const Results = () => {
                 Кейс: Финтех-сервис МСБ
               </div>
               <p className="text-lg text-muted-foreground">
-                <strong className="text-foreground">Контекст:</strong> Сервис онлайн-кредитования для малого бизнеса в СНГ. 
+                <strong className="text-foreground">Контекст:</strong> Сервис онлайн-кредитования для малого бизнеса в РФ, СНГ, MENA. 
                 Проблемы: низкая активация после регистрации, высокий CAC через контекст, 
                 слабая retention когорт.
               </p>

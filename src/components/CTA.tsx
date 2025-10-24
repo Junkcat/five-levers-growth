@@ -1,7 +1,22 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ContactDialog from "./ContactDialog";
 
 const CTA = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [requestType, setRequestType] = useState<"diagnostic" | "methodology">("diagnostic");
+
+  const handleDiagnosticClick = () => {
+    setRequestType("diagnostic");
+    setDialogOpen(true);
+  };
+
+  const handleMethodologyClick = () => {
+    setRequestType("methodology");
+    setDialogOpen(true);
+  };
+
   return (
     <section className="py-20 bg-neutral-50">
       <div className="container mx-auto px-4">
@@ -21,6 +36,7 @@ const CTA = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Button 
                   size="lg" 
+                  onClick={handleDiagnosticClick}
                   className="bg-white text-primary-800 hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold"
                 >
                   Запросить диагностику
@@ -29,6 +45,7 @@ const CTA = () => {
                 <Button 
                   size="lg" 
                   variant="outline"
+                  onClick={handleMethodologyClick}
                   className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8 py-6 h-auto backdrop-blur-sm"
                 >
                   Скачать методологию PDF
@@ -51,6 +68,12 @@ const CTA = () => {
               </div>
             </div>
           </div>
+          
+          <ContactDialog 
+            open={dialogOpen} 
+            onOpenChange={setDialogOpen}
+            requestType={requestType}
+          />
         </div>
       </div>
     </section>
