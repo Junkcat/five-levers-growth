@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+const TELEGRAM_BOT_TOKEN = Deno.env.get("TELEGRAM_BOT_TOKEN");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -55,6 +56,34 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     console.log("Email sent successfully:", emailData);
+
+    // Send Telegram notification
+    try {
+      const telegramMessage = `🔔 Новый запрос: ${requestType}\n\n📊 Компания: ${company}\n👤 ФИО: ${name}\n📧 Контакт: ${contact}`;
+      
+      const telegramResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: "@askolesnikov",
+          text: telegramMessage,
+          parse_mode: "HTML",
+        }),
+      });
+
+      const telegramData = await telegramResponse.json();
+      
+      if (!telegramResponse.ok) {
+        console.error("Telegram API error:", telegramData);
+      } else {
+        console.log("Telegram notification sent successfully:", telegramData);
+      }
+    } catch (telegramError: any) {
+      console.error("Error sending Telegram notification:", telegramError);
+      // Don't fail the whole request if Telegram fails
+    }
 
     return new Response(JSON.stringify(emailData), {
       status: 200,
