@@ -1,12 +1,16 @@
+import logoImage from "@/assets/logo.png";
+
 const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="text-3xl font-bold mb-4">
-              <span className="text-accent-400">Five</span>Levers
-            </div>
+            <img 
+              src={logoImage} 
+              alt="FiveLevers Logo" 
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-neutral-400 text-sm">
               Пять рычагов измеримого роста
             </p>
@@ -44,7 +48,7 @@ const Footer = () => {
               <li>РФ, СНГ, MENA</li>
               <li className="pt-2">
                 <a href="https://t.me/askolesnikov" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Telegram</a> • 
-                <a href="#linkedin" className="hover:text-white transition-colors ml-2">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/askolesnikov" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors ml-2">LinkedIn</a>
               </li>
             </ul>
           </div>
