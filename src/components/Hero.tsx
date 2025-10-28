@@ -31,10 +31,6 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <div className="inline-block mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-            <span className="text-sm font-medium">FiveLevers Methodology</span>
-          </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Пять рычагов<br />измеримого роста
           </h1>

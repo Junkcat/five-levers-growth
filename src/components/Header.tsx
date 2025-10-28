@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import logoImage from "@/assets/logo-main.png";
+import logoImage from "@/assets/logo-full.png";
 import ContactDialog from "./ContactDialog";
 
 const Header = () => {
@@ -20,9 +20,8 @@ const Header = () => {
             <div className="flex items-center">
               <img 
                 src={logoImage} 
-                alt="FiveLevers" 
-                className="h-12 w-auto"
-                style={{ mixBlendMode: 'darken' }}
+                alt="FiveLevers - Пять рычагов роста" 
+                className="h-14 w-auto"
               />
             </div>
             

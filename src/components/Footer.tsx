@@ -1,4 +1,4 @@
-import logoImage from "@/assets/logo-main.png";
+import logoImage from "@/assets/logo-icon.png";
 
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
             <img 
               src={logoImage} 
               alt="FiveLevers Logo" 
-              className="h-12 w-auto mb-4 brightness-0 invert"
+              className="h-16 w-16 mb-4"
             />
             <p className="text-neutral-400 text-sm">
               Пять рычагов измеримого роста
