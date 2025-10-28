@@ -9,7 +9,8 @@ const Footer = () => {
             <img 
               src={logoImage} 
               alt="FiveLevers Logo" 
-              className="h-16 w-16 mb-4"
+              className="h-16 w-16 mb-4 drop-shadow-lg"
+              style={{ filter: 'brightness(1.1)' }}
             />
             <p className="text-neutral-400 text-sm">
               Пять рычагов измеримого роста

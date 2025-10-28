@@ -21,7 +21,7 @@ const Header = () => {
               <img 
                 src={logoImage} 
                 alt="FiveLevers - Пять рычагов роста" 
-                className="h-14 w-auto"
+                className="h-14 w-auto drop-shadow-sm"
               />
             </div>
             
