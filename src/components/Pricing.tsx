@@ -52,7 +52,7 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="pricing" style={{ scrollMarginTop: '80px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-4">

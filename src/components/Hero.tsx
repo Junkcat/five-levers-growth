@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-growth.jpg";
-import logoImage from "@/assets/logo.png";
 import ContactDialog from "./ContactDialog";
 
 const Hero = () => {
@@ -30,16 +29,8 @@ const Hero = () => {
         />
       </div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-4xl mx-auto text-center text-white">
-          <div className="mb-8 flex justify-center">
-            <img 
-              src={logoImage} 
-              alt="FiveLevers Logo" 
-              className="h-24 md:h-32 w-auto"
-            />
-          </div>
-          
           <div className="inline-block mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
             <span className="text-sm font-medium">FiveLevers Methodology</span>
           </div>
