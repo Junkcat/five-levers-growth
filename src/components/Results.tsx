@@ -112,47 +112,65 @@ const Results = () => {
             <div className="border-t border-neutral-200 pt-6">
               <p className="text-sm font-semibold text-foreground mb-4">Что именно делали (по рычагам)</p>
               
-              <div className="space-y-4 text-sm text-muted-foreground">
-                <div>
-                  <p className="font-semibold text-foreground mb-2">● Product</p>
-                  <ul className="space-y-1 ml-4">
-                    <li>• Сократили онбординг до 4 шагов, добавили прогресс-бар и микро-цели (KYC, банк-выписки, бенефициары).</li>
-                    <li>• Динамический чек-лист документов: показываем только то, что нужно конкретному ИП/ООО (по ОКВЭД/НПД/стране).</li>
-                    <li>• Автозаполнение из гос/банковских источников и OCR: ИНН/Устав/выписки подтягиваются автоматически.</li>
-                    <li>• Ранний soft-pull скоринг до полной анкеты, чтобы отсеивать «непроход» раньше и экономить KYC.</li>
-                    <li>• Прозрачные статусы заявки и ETA по каждому этапу (снимает брошенные заявки).</li>
-                  </ul>
+              <div className="grid md:grid-cols-2 gap-6 text-sm">
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-bold text-foreground mb-3 text-base">● Product</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Сократили онбординг до 4 шагов с прогресс-баром и динамическим чек-листом доков.</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Ранний soft-скоринг до полной анкеты, чтобы отсеивать «непроход» раньше.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <p className="font-bold text-foreground mb-3 text-base">● Channels</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Перенесли бюджет из поиска в таргет + контент-лидмагниты.</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Запустили B2B-партнёрки (бухсервисы, PSP/эквайринг, маркетплейсы поставщиков).</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 
-                <div>
-                  <p className="font-semibold text-foreground mb-2">● Channels</p>
-                  <ul className="space-y-1 ml-4">
-                    <li>• Перенесли бюджет из дорогого поиска в таргет и контент с лид-магнитами (гайд по кредитному чек-листу, калькулятор лимита).</li>
-                    <li>• Запустили B2B-партнёрки: бухгалтерские сервисы, эквайринг/PSP, маркетплейсы поставщиков (lead-sharing).</li>
-                    <li>• LAL-аудитории по лучшим сегментам (оборот/отрасль/возраст бизнеса), агрессивный минус-инг по "инфо-шуму".</li>
-                    <li>• Реферальная программа для действующих заёмщиков и партнёров (CPA ниже канального).</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-foreground mb-2">● Data</p>
-                  <ul className="space-y-1 ml-4">
-                    <li>• Описали event-схему и построили воронки в Amplitude: reg → kyc_start → docs_ok → app_submit → approve → disburse.</li>
-                    <li>• Модель качества источников: сравниваем CAC не к регистрации, а к выдаче (CPD) и к валовой марже по когорте.</li>
-                    <li>• Cut-off тесты на скоринге: A/B по порогам и документационным требованиям → баланс «одобрения vs риск/затраты».</li>
-                    <li>• Атрибуция по "последней платной → первой выдаче" + holdout-тесты для контента/рефералок.</li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <p className="font-semibold text-foreground mb-2">● Economics (без прайс-тестов)</p>
-                  <ul className="space-y-1 ml-4">
-                    <li>• Cost of Risk↓: новые поведенческие признаки (дневной оборот, стабильность поступлений, сезонность) + антифрод (device/IP/паспорт-вектор).</li>
-                    <li>• Ops-cost↓: авто-решения для «чистых» кейсов, ручной андеррайтинг только для границы; KYC/AML в асинхрон.</li>
-                    <li>• Funding mix: перевели часть портфеля на более дешёвую линию; разгрузили стоимость капитала.</li>
-                    <li>• Лимит/срок — продуктовые тесты (не цена): дефолтный срок 9→12 мес. для "low-risk" сегмента, автовыдача микролимитов.</li>
-                    <li>• Early-warning пост-выдачи: снижение DPD0-30 → меньше ожидаемых потерь и call-center нагрузки.</li>
-                  </ul>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-bold text-foreground mb-3 text-base">● Data</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Ввели event-схему и воронки в Amplitude: reg → kyc → docs → submit → approve → disburse.</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Атрибуция к выдаче/марже (CPD, unit-экономика по когорте), а не к регистрации.</span>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <p className="font-bold text-foreground mb-3 text-base">● Economics (без прайс-тестов)</p>
+                    <ul className="space-y-2 text-muted-foreground">
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>CoR↓: новые поведенческие признаки + антифрод; ops-cost↓: авто-решения для «чистых» кейсов.</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="mr-2 text-primary-600 font-bold">•</span>
+                        <span>Funding mix удешевили часть портфеля; настроили лимит/срок (не цену) под риск-сегменты.</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
