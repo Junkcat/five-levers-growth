@@ -43,7 +43,7 @@ if (!meResp.ok) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          chat_id: "@askolesnikov",
+          chat_id: "7778603",
           text: telegramMessage,
           parse_mode: "HTML",
         }),
