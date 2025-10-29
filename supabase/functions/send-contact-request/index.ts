@@ -42,13 +42,12 @@ const handler = async (req: Request): Promise<Response> => {
           parse_mode: "HTML",
         }),
       });
+      console.log("Sending contact request to Telegram:", telegramResponse);
 
       const telegramData = await telegramResponse.json();
-      console.log("Telegram response", telegramResponse);
 
-                  
       if (!telegramResponse.ok) {
-        console.error("Telegram API error:", telegramResponse);
+        console.error("Telegram API error:", telegramData);
         throw new Error(telegramData.description || "Failed to send Telegram message");
       }
 
