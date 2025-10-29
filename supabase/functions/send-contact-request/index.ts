@@ -24,13 +24,7 @@ const handler = async (req: Request): Promise<Response> => {
   try {
     const { company, name, contact, requestType }: ContactRequest = await req.json();
 
-    // 1) Быстрый health-check токена (один раз на холодный старт можно оставить)
-const meResp = await fetch(tgUrl("getMe"));
-if (!meResp.ok) {
-  const body = await meResp.text();
-  console.error("Telegram getMe failed:", meResp.status, body);
-  throw new Error("Telegram token invalid or URL wrong");
-};
+
     console.log("Sending contact request to Telegram:", { company, name, contact, requestType });
 
     // Send Telegram notification
@@ -50,7 +44,9 @@ if (!meResp.ok) {
       });
 
       const telegramData = await telegramResponse.json();
-      
+      console.log("Telegram response", telegramResponse);
+
+                  
       if (!telegramResponse.ok) {
         console.error("Telegram API error:", telegramData);
         throw new Error(telegramData.description || "Failed to send Telegram message");
