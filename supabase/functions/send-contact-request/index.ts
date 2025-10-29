@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const TELEGRAM_BOT_TOKEN = "8120833901:AAETeqkfLA_ynt-E0fShaDD8KtXc3CyroRs";
+const TG_TOKEN = (Deno.env.get("TELEGRAM_BOT_TOKEN") ?? "").trim();
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
