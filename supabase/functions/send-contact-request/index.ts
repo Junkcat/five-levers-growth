@@ -1,6 +1,6 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 
-const TG_TOKEN = ("8120833901:AAETeqkfLA_ynt-E0fShaDD8KtXc3CyroRs").trim();
+const TG_TOKEN = ("8120833901:AAETeqkfLA_ynt-E0fShaDD8KtXc3CyroRs");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -37,7 +37,7 @@ if (!meResp.ok) {
     try {
       const telegramMessage = `🔔 Новый запрос: ${requestType}\n\n📊 Компания: ${company}\n👤 ФИО: ${name}\n📧 Контакт: ${contact}`;
       
-      const telegramResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
+      const telegramResponse = await fetch(`https://api.telegram.org/bot8120833901:AAETeqkfLA_ynt-E0fShaDD8KtXc3CyroRs/sendMessage`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
