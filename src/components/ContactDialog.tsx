@@ -66,7 +66,7 @@ const ContactDialog = ({ open, onOpenChange, requestType }: ContactDialogProps) 
       } else {
         toast({
           title: "Ошибка",
-          description: "Не удалось отправить запрос. Попробуйте позже.",
+          description: "Не удалось отправить запрос. Попробуйте позже. Тест",
           variant: "destructive",
         });
       }
