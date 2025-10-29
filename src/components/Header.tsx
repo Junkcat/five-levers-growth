@@ -12,6 +12,10 @@ const Header = () => {
     setDialogOpen(true);
   };
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
@@ -21,7 +25,8 @@ const Header = () => {
               <img 
                 src={logoImage} 
                 alt="FiveLevers - Пять рычагов роста" 
-                className="h-14 w-auto drop-shadow-sm"
+                className="h-14 w-auto drop-shadow-sm cursor-pointer"
+                onClick={handleLogoClick}
               />
             </div>
             
