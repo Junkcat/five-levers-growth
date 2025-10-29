@@ -48,8 +48,7 @@ const handler = async (req: Request): Promise<Response> => {
 
                   
       if (!telegramResponse.ok) {
-        console.error("Telegram API error:", telegramData);
-        console.error("Telegram response", telegramResponse);
+        console.error("Telegram API error:", telegramResponse);
         throw new Error(telegramData.description || "Failed to send Telegram message");
       }
 
