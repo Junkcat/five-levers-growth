@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import ContactDialog from "./ContactDialog";
 
 const packages = [
   {
@@ -51,8 +53,22 @@ const packages = [
 ];
 
 const Pricing = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [requestType, setRequestType] = useState<"diagnostic" | "methodology">("diagnostic");
+
+  const handlePackageClick = () => {
+    setRequestType("diagnostic");
+    setDialogOpen(true);
+  };
+
+  const handleDiagnosticClick = () => {
+    setRequestType("diagnostic");
+    setDialogOpen(true);
+  };
+
   return (
-    <section className="py-20 bg-white" id="pricing" style={{ scrollMarginTop: '80px' }}>
+    <>
+      <section className="py-20 bg-white" id="pricing" style={{ scrollMarginTop: '80px' }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-foreground mb-4">
@@ -100,6 +116,7 @@ const Pricing = () => {
               </ul>
               
               <Button 
+                onClick={handlePackageClick}
                 className={`w-full ${
                   pkg.popular 
                     ? 'gradient-cta text-white' 
@@ -117,12 +134,24 @@ const Pricing = () => {
           <p className="text-muted-foreground mb-4">
             Не уверены, какой пакет подходит? Начните с бесплатной диагностической сессии
           </p>
-          <Button variant="outline" size="lg" className="border-primary-600 text-primary-600 hover:bg-primary-50">
+          <Button 
+            onClick={handleDiagnosticClick}
+            variant="outline" 
+            size="lg" 
+            className="border-primary-600 text-primary-600 hover:bg-primary-50"
+          >
             Запросить диагностику
           </Button>
         </div>
       </div>
     </section>
+    
+    <ContactDialog 
+      open={dialogOpen} 
+      onOpenChange={setDialogOpen}
+      requestType={requestType}
+    />
+    </>
   );
 };
 
