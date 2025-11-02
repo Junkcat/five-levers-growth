@@ -5,10 +5,10 @@ import ContactDialog from "./ContactDialog";
 
 const Header = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [requestType, setRequestType] = useState<"diagnostic" | "methodology">("diagnostic");
+  const [requestType, setRequestType] = useState<string>("Запрос диагностики");
 
   const handleContactClick = () => {
-    setRequestType("diagnostic");
+    setRequestType("Запрос диагностики");
     setDialogOpen(true);
   };
 

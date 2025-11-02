@@ -54,15 +54,15 @@ const packages = [
 
 const Pricing = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [requestType, setRequestType] = useState<"diagnostic" | "methodology">("diagnostic");
+  const [requestType, setRequestType] = useState<string>("Запрос диагностики");
 
-  const handlePackageClick = () => {
-    setRequestType("diagnostic");
+  const handlePackageClick = (packageName: string) => {
+    setRequestType(`Обсудить пакет: ${packageName}`);
     setDialogOpen(true);
   };
 
   const handleDiagnosticClick = () => {
-    setRequestType("diagnostic");
+    setRequestType("Запрос диагностики");
     setDialogOpen(true);
   };
 
@@ -116,7 +116,7 @@ const Pricing = () => {
               </ul>
               
               <Button 
-                onClick={handlePackageClick}
+                onClick={() => handlePackageClick(pkg.name)}
                 className={`w-full ${
                   pkg.popular 
                     ? 'gradient-cta text-white' 

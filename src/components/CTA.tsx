@@ -5,15 +5,15 @@ import ContactDialog from "./ContactDialog";
 
 const CTA = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [requestType, setRequestType] = useState<"diagnostic" | "methodology">("diagnostic");
+  const [requestType, setRequestType] = useState<string>("Запрос диагностики");
 
   const handleDiagnosticClick = () => {
-    setRequestType("diagnostic");
+    setRequestType("Запрос диагностики");
     setDialogOpen(true);
   };
 
   const handleMethodologyClick = () => {
-    setRequestType("methodology");
+    setRequestType("Скачать методологию PDF");
     setDialogOpen(true);
   };
 

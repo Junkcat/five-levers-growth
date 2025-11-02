@@ -16,7 +16,7 @@ const contactSchema = z.object({
 interface ContactDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  requestType: "diagnostic" | "methodology";
+  requestType: string;
 }
 
 const ContactDialog = ({ open, onOpenChange, requestType }: ContactDialogProps) => {
@@ -40,7 +40,7 @@ const ContactDialog = ({ open, onOpenChange, requestType }: ContactDialogProps) 
           company: validated.company,
           name: validated.name,
           contact: validated.contact,
-          requestType: requestType === "diagnostic" ? "Запрос диагностики" : "Скачать методологию PDF"
+          requestType: requestType
         },
       });
 
@@ -80,7 +80,7 @@ const ContactDialog = ({ open, onOpenChange, requestType }: ContactDialogProps) 
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>
-            {requestType === "diagnostic" ? "Запросить диагностику" : "Скачать методологию PDF"}
+            {requestType}
           </DialogTitle>
           <DialogDescription>
             Заполните форму и мы свяжемся с вами в течение 48 часов
