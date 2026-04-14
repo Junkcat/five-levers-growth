@@ -9,6 +9,7 @@ import ValidateIdea from "./pages/ValidateIdea";
 import ComingSoon from "./pages/ComingSoon";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Cases from "./pages/Cases";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/training" element={<ComingSoon title="Обучение продуктовых команд" description="Практическое обучение продуктовых команд: воркшопы, менторинг, кейс-стади на реальных продуктах вашей компании." />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cases" element={<Cases />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

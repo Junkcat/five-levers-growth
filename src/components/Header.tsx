@@ -59,6 +59,9 @@ const Header = () => {
                   </a>
                 </>
               )}
+              <a href="/cases" className="text-sm font-medium hover:text-primary transition-colors">
+                Кейсы
+              </a>
               <Button onClick={handleContactClick} size="sm">
                 Связаться
               </Button>
