@@ -4,39 +4,48 @@ import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, GraduationCap, Users, TrendingUp, Zap, DollarSign, BarChart3, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle, GraduationCap, Users, TrendingUp, Zap, DollarSign, BookOpen } from "lucide-react";
 
 const reasons = [
-  { icon: DollarSign, title: "Финансовая экономия", desc: "Средняя стоимость найма готового PO — около 500 тыс. руб. без учёта адаптации. Внутренняя школа дешевле и быстрее." },
-  { icon: Zap, title: "Практическая ориентация", desc: "Обучение идёт на реальных инициативах компании. Обязательное условие входа — существующий продукт или готовые гипотезы." },
-  { icon: Users, title: "Адаптация программы", desc: "По итогам ассесмента формируется трек обучения с учётом специфики рынка и внутренних процессов." },
-  { icon: TrendingUp, title: "Лояльность сотрудников", desc: "Инвестиции в развитие внутренних специалистов повышают их удержание и вовлечённость." },
-  { icon: BookOpen, title: "Масштабирование стандарта", desc: "Единый стандарт роли PO тиражируется через следующие потоки и развивается через Центр экспертизы." },
+  { icon: DollarSign, title: "Финансовая эффективность", desc: "Обучение на реальных инициативах компании обходится значительно дешевле внешнего найма готовых специалистов." },
+  { icon: Zap, title: "Практическая ориентация", desc: "Обучение ведётся на реальных продуктах и инициативах компании — участники сразу работают с живым материалом." },
+  { icon: Users, title: "Адаптация под компанию", desc: "Программа формируется с учётом специфики рынка, отраслевой логики и внутренних процессов организации." },
+  { icon: TrendingUp, title: "Удержание сотрудников", desc: "Инвестиции в развитие внутренних специалистов повышают вовлечённость и снижают текучесть ключевых кадров." },
+  { icon: BookOpen, title: "Тиражирование стандарта", desc: "Единый стандарт роли владельца продукта воспроизводится через следующие потоки внутри компании." },
 ];
 
 const framework = [
-  { stage: "Research", ru: "Поиск идей", weeks: "4 нед." },
-  { stage: "Ideation", ru: "Генерация идей", weeks: "2 нед.", milestone: "УК №1" },
-  { stage: "Discovery", ru: "Валидация гипотез", weeks: "3 нед.", milestone: "УК №2" },
-  { stage: "Design", ru: "Проектирование", weeks: "3 нед.", milestone: "УК (ключевой)" },
-  { stage: "Development", ru: "Разработка", weeks: "6 нед." },
-  { stage: "Deploy", ru: "Внедрение", weeks: "2 нед." },
-  { stage: "Scale", ru: "Масштабирование", weeks: "TBD" },
+  {
+    stage: "Генерация идей",
+    en: "Product Ideation",
+    desc: "Сбор и упаковка инициатив. Определение целевых аудиторий, ценностного предложения, первичная оценка потенциала.",
+    deliverables: ["Карта инициатив", "Целевые сегменты", "Первичный портфель"],
+  },
+  {
+    stage: "Исследование и валидация",
+    en: "Product Discovery",
+    desc: "Проверка гипотез на реальных пользователях. Анализ рынка, конкурентов, бизнес-обоснование инициативы.",
+    deliverables: ["Результаты исследований", "Проверенные гипотезы", "Бизнес-обоснование"],
+  },
+  {
+    stage: "Разработка и запуск",
+    en: "Product Delivery",
+    desc: "Проектирование минимального продукта, разработка, запуск пилота и первые бизнес-результаты.",
+    deliverables: ["Минимальный продукт", "Результаты пилота", "Первый эффект"],
+  },
+  {
+    stage: "Масштабирование",
+    en: "Product Scale",
+    desc: "Тиражирование успешных решений, оптимизация воронки, управление метриками роста.",
+    deliverables: ["Масштабированный продукт", "Зафиксированные метрики", "Дорожная карта роста"],
+  },
 ];
 
-const knowledgeBlocks = [
-  { num: "01", title: "Продуктовый подход", items: ["Продуктовое мышление в корпорации", "Культура Agile и роль PO", "Внедрение подхода в функции"] },
-  { num: "02", title: "Профиль роли PO", items: ["Артефакты и практики", "Предпринимательский подход", "Ownership и профкомпетенции"] },
-  { num: "03", title: "Фреймворк", items: ["Артефактная модель и стадии", "Сокращение TTM", "Трекинг и решение блокеров"] },
-  { num: "04", title: "Навыки продакта", items: ["Discovery и работа с гипотезами", "MVP и пилоты", "Стейкхолдеры и метрики"] },
-  { num: "05", title: "Современные методы", items: ["Гибкое планирование", "Peer-to-peer сообщество", "PO как лидер команды"] },
-];
-
-const cases = [
-  { company: "Unibank", metrics: ["87 сотрудников обучено", "20 новых продуктов выведено", "TTM: с 12 до 2 месяцев"] },
-  { company: "Hamkorbank", metrics: ["25 PO + 40 топ-менеджеров", "16 новых продуктов с эффектом на P&L", "Первые продажи через 2 месяца после старта"] },
-  { company: "Северсталь", metrics: ["125 PO + 14 трекеров + 8 тьюторов", "50+ инициатив с эффектом на PnL", "TTM: с 9 до 6 месяцев"] },
-  { company: "СИБУР", metrics: ["7 новых скрам-команд", "Сроки реализации сократились в 3 раза", "Цель — оптимизация производства на XXX млн руб."] },
+const trainingCases = [
+  { company: "Unibank", metrics: ["87 сотрудников обучено", "20 новых продуктов выведено на рынок", "Время до рынка: с 12 до 2 месяцев"] },
+  { company: "Hamkorbank", metrics: ["25 владельцев продукта + 40 топ-менеджеров", "16 новых продуктов с эффектом на прибыль", "Первые продажи через 2 месяца после старта"] },
+  { company: "Северсталь", metrics: ["125 владельцев продукта + 14 трекеров", "50+ инициатив с эффектом на финансовый результат", "Время до рынка сократилось на 33%"] },
+  { company: "СИБУР", metrics: ["7 новых команд", "Сроки реализации сократились в 3 раза", "Финансовая цель — оптимизация производства на XXX млн руб."] },
 ];
 
 const Training = () => {
@@ -53,19 +62,19 @@ const Training = () => {
           <div className="max-w-4xl mx-auto text-center text-white py-16">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
               <GraduationCap className="h-4 w-4" />
-              <span className="text-sm font-medium">Школа Product Owners</span>
+              <span className="text-sm font-medium">Школа владельцев продукта</span>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Обучение продуктовых команд
             </h1>
             <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-10">
-              Школа PO на реальных инициативах вашей компании. От идеи до защиты на управляющем
-              комитете — за 4 месяца с измеримым финансовым результатом.
+              Программа подготовки владельцев продукта на реальных инициативах вашей компании.
+              От генерации идей до первого бизнес-результата — за 4 месяца.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm mb-10">
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> от 20 участников</span>
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> от 4 месяцев</span>
-              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> 7-stage фреймворк</span>
+              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> 4-этапный фреймворк</span>
             </div>
             <Button size="lg" onClick={() => setDialogOpen(true)}
               className="bg-white text-primary-800 hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold">
@@ -81,8 +90,7 @@ const Training = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Почему это работает</p>
-            <h2 className="text-4xl font-bold text-foreground mb-4">5 причин выбрать внутреннюю школу</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Вместо дорогого внешнего найма — системный рост своих людей</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">5 причин запустить Школу владельцев продукта</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reasons.map((r, i) => (
@@ -103,51 +111,27 @@ const Training = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Программа обучения</p>
-            <h2 className="text-4xl font-bold text-foreground mb-4">7-stage фреймворк</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">4 этапа фреймворка</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Обучение синхронизировано со стадиями разработки продукта. По итогам ключевых стадий — защита на Управляющем комитете.
+              Обучение синхронизировано со стадиями реального продуктового цикла
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+          <div className="grid md:grid-cols-2 gap-8">
             {framework.map((f, i) => (
-              <div key={i} className="text-center">
-                <div className={`rounded-xl p-3 mb-2 ${i < 4 ? 'bg-primary-600 text-white' : 'bg-muted border-2 border-border'}`}>
-                  <p className="font-bold text-xs">{f.stage}</p>
-                  <p className={`text-[10px] mt-0.5 ${i < 4 ? 'text-white/70' : 'text-muted-foreground'}`}>{f.weeks}</p>
+              <Card key={i} className="p-6 border-2 hover:shadow-lg transition-all">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-8 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm shrink-0">{i + 1}</div>
+                  <div>
+                    <h3 className="font-bold text-foreground">{f.stage}</h3>
+                    <p className="text-xs text-primary-500">{f.en}</p>
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground">{f.ru}</p>
-                {f.milestone && (
-                  <p className="text-[10px] text-accent-500 font-semibold mt-1">{f.milestone}</p>
-                )}
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-sm text-muted-foreground mt-6">
-            Управляющие комитеты (УК) проводятся по итогам стадий Ideation, Discovery и Design. Ключевой УК — на Design.
-          </p>
-        </div>
-      </section>
-
-      {/* Блоки знаний */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Содержание</p>
-            <h2 className="text-4xl font-bold text-foreground mb-4">5 блоков знаний</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
-            {knowledgeBlocks.map((b, i) => (
-              <Card key={i} className="p-5 border-2">
-                <div className="text-4xl font-black text-primary-100 mb-3">{b.num}</div>
-                <h3 className="font-bold text-foreground mb-3 text-sm">{b.title}</h3>
-                <ul className="space-y-1.5">
-                  {b.items.map((item, j) => (
-                    <li key={j} className="flex gap-1.5 text-xs text-muted-foreground">
-                      <CheckCircle className="h-3.5 w-3.5 text-primary-500 shrink-0 mt-0.5" />
-                      {item}
-                    </li>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{f.desc}</p>
+                <div className="flex flex-wrap gap-2">
+                  {f.deliverables.map((d, j) => (
+                    <span key={j} className="text-xs px-2 py-1 bg-primary-50 text-primary-700 rounded-md font-medium">{d}</span>
                   ))}
-                </ul>
+                </div>
               </Card>
             ))}
           </div>
@@ -155,14 +139,14 @@ const Training = () => {
       </section>
 
       {/* Кейсы */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Результаты клиентов</p>
             <h2 className="text-4xl font-bold text-foreground mb-4">Что получают компании</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            {cases.map((c, i) => (
+            {trainingCases.map((c, i) => (
               <Card key={i} className="p-6 border-2">
                 <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">{c.company}</p>
                 <ul className="space-y-2">
@@ -179,32 +163,10 @@ const Training = () => {
         </div>
       </section>
 
-      {/* Условия */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-10">Условия проведения</h2>
-          <div className="grid md:grid-cols-3 gap-6 mb-6">
-            {[
-              { label: "Участники", value: "от 20 чел." },
-              { label: "Длительность", value: "от 4 мес." },
-              { label: "Стоимость", value: "от 7,2 млн руб." },
-            ].map((c, i) => (
-              <Card key={i} className="p-6 text-center border-2">
-                <p className="text-3xl font-bold text-primary-600 mb-2">{c.value}</p>
-                <p className="text-sm text-muted-foreground">{c.label}</p>
-              </Card>
-            ))}
-          </div>
-          <Card className="p-5 border-2 bg-muted/30 text-sm text-muted-foreground">
-            <p><strong>Формат:</strong> вводный оффлайн-интенсив (1–2 дня) + от 10 онлайн-мероприятий по 4 ч. + P2P-сессии + индивидуальные сессии с экспертами + Управляющий комитет. Онлайн-платформа — бесплатно на весь период обучения и 2 месяца после.</p>
-          </Card>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-primary-800 via-accent-600 to-primary-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">Готовы запустить Школу PO?</h2>
+          <h2 className="text-4xl font-bold mb-4">Готовы запустить Школу?</h2>
           <p className="text-xl text-white/85 mb-8 max-w-xl mx-auto">
             Получите план работ за 48 часов на основе вашей проблематики
           </p>

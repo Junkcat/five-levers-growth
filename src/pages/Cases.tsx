@@ -207,9 +207,6 @@ const CaseCard = ({ c }: { c: typeof cases[0]; index: number }) => {
             <h3 className="text-2xl font-bold">{c.company}</h3>
             <p className="text-white/80 text-sm mt-1">{c.industry}</p>
           </div>
-          <span className="text-white/60 text-xs bg-white/10 px-3 py-1 rounded-full whitespace-nowrap">
-            {c.period}
-          </span>
         </div>
         <div className="grid grid-cols-3 gap-3 mt-4">
           {c.metrics.map((m, i) => (

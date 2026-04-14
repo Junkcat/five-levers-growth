@@ -74,13 +74,6 @@ const workBlocks = [
   },
 ];
 
-const stratSession = [
-  { block: "1. Продуктовый подход", items: ["Продуктовый vs проектный подход", "Кейсы применения в крупном бизнесе", "Модель трансформации из 5 этапов"] },
-  { block: "2. Портфельное управление", items: ["Модель портфельного управления", "Сегментация и приоритизация", "Cost reduction и выбор активов"] },
-  { block: "3. Корпоративный фреймворк", items: ["7-stage фреймворк от Ideation до Scale", "Быстрые победы P&L и снижение TTM", "Финансовый фрейм и гибкое бюджетирование"] },
-  { block: "4. Product Owner как драйвер", items: ["Предпринимательский майндсет", "Масштабирование через Центр экспертизы", "Условия работы PO в компании"] },
-];
-
 const monitoringLevels = [
   { level: "C-level / Совет директоров", desc: "Достижение стратегических целей и метрик компании" },
   { level: "Директора бизнес-блоков", desc: "Цели по бизнес-направлениям и метрики портфелей" },
@@ -114,7 +107,6 @@ const PortfolioProcesses = () => {
             <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm mb-10">
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> Стратегические сессии</span>
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> OKR и дерево метрик</span>
-              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-300" /> от 1,5 млн руб.</span>
             </div>
             <Button size="lg" onClick={() => setDialogOpen(true)}
               className="bg-white text-primary-800 hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold">
@@ -203,47 +195,6 @@ const PortfolioProcesses = () => {
         </div>
       </section>
 
-      {/* Стратегическая сессия */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="text-center mb-14">
-            <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Точка входа</p>
-            <h2 className="text-4xl font-bold text-foreground mb-4">Стратегическая сессия по генерации инициатив</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Знакомство с продуктовым подходом и формирование первичного портфеля с метриками и эффектами.
-              Для топ-менеджеров и руководителей бизнес-направлений.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
-            {stratSession.map((s, i) => (
-              <Card key={i} className="p-5 border-2">
-                <h3 className="font-bold text-foreground mb-3 text-sm">{s.block}</h3>
-                <ul className="space-y-1.5">
-                  {s.items.map((item, j) => (
-                    <li key={j} className="flex gap-1.5 text-xs text-muted-foreground">
-                      <CheckCircle className="h-3.5 w-3.5 text-primary-500 shrink-0 mt-0.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
-          </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              "Сформулированы стратегические приоритеты компании",
-              "Первичный портфель инициатив с метриками и оценкой бизнес-потенциала",
-              "Список кандидатов на роль Владельцев продуктов",
-            ].map((r, i) => (
-              <div key={i} className="flex gap-3 p-4 bg-primary-50 rounded-xl border border-primary-200">
-                <CheckCircle className="h-5 w-5 text-primary-600 shrink-0 mt-0.5" />
-                <p className="text-sm text-foreground">{r}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Мониторинг по уровням */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -285,19 +236,6 @@ const PortfolioProcesses = () => {
                 <CheckCircle className="h-5 w-5 text-primary-500 shrink-0 mt-0.5" />
                 <p className="text-sm text-foreground">{r}</p>
               </div>
-            ))}
-          </div>
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              { label: "Трекинг команд", value: "от 450 тыс.", sub: "руб./3 мес. за команду" },
-              { label: "Стратегические сессии", value: "от 3,6 млн", sub: "руб. (6 сессий × 600 тыс./день)" },
-              { label: "Консалтинг PMO", value: "от 1,5 млн", sub: "руб. (30 тыс. руб./час)" },
-            ].map((c, i) => (
-              <Card key={i} className="p-6 text-center border-2 bg-white">
-                <p className="text-sm text-muted-foreground mb-2">{c.label}</p>
-                <p className="text-2xl font-bold text-primary-600">{c.value}</p>
-                <p className="text-xs text-muted-foreground mt-1">{c.sub}</p>
-              </Card>
             ))}
           </div>
         </div>

@@ -193,30 +193,6 @@ const Assessment = () => {
         </div>
       </section>
 
-      {/* Условия */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-10">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Условия проведения</h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {[
-              { label: "Участники", value: "от 30 человек" },
-              { label: "Длительность", value: "от 4 недель" },
-              { label: "Стоимость", value: "от 30 тыс. руб./чел." },
-            ].map((c, i) => (
-              <Card key={i} className="p-6 text-center border-2">
-                <p className="text-3xl font-bold text-primary-600 mb-2">{c.value}</p>
-                <p className="text-sm text-muted-foreground">{c.label}</p>
-              </Card>
-            ))}
-          </div>
-          <p className="text-center text-sm text-muted-foreground">
-            Скидка 30% при интеграции онлайн-платформы мониторинга развития сотрудников
-          </p>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-700 to-primary-500 text-white">
         <div className="container mx-auto px-4 text-center">

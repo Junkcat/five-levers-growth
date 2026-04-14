@@ -5,34 +5,34 @@ const phases = [
   {
     icon: Search,
     phase: "Недели 1–2",
-    title: "Discovery",
-    subtitle: "Диагностика",
+    title: "Диагностика",
+    subtitle: "Аудит и анализ",
     description: "Экспресс-аудит 5 рычагов, базовые метрики, карта узких мест, гипотезы",
     deliverables: ["Аудит текущего состояния", "Карта узких мест", "Приоритетные гипотезы"]
   },
   {
     icon: Pencil,
     phase: "Недели 3–5",
-    title: "Design",
-    subtitle: "Проектирование",
-    description: "Дизайн-спринты, канальный микс, data-схема, прайс-варианты, роли и ритуалы",
-    deliverables: ["Канальный микс", "Data-архитектура", "Roadmap решений"]
+    title: "Проектирование",
+    subtitle: "Дизайн решений",
+    description: "Дизайн-спринты, канальный микс, схема данных, варианты ценообразования, роли и ритуалы",
+    deliverables: ["Канальный микс", "Архитектура данных", "Дорожная карта решений"]
   },
   {
     icon: Rocket,
     phase: "Недели 6–9",
-    title: "Development",
+    title: "Разработка",
     subtitle: "Запуск MVP",
-    description: "Запускаем 5–10 экспериментов по приоритетным рычагам — новый оффер, онбординг, прайс-тесты",
+    description: "Запускаем 5–10 экспериментов по приоритетным рычагам — новое предложение, онбординг, тесты цен",
     deliverables: ["5-10 A/B тестов", "MVP решений", "Первые результаты"]
   },
   {
     icon: TrendingUp,
     phase: "Недели 10–12",
-    title: "Deploy & Scale",
-    subtitle: "Масштабирование",
-    description: "Масштабируем сработавшее, фиксируем плейбуки, обучаем команду, план на квартал",
-    deliverables: ["Плейбуки v1.0", "Обучение команды", "План на 2 квартала"]
+    title: "Масштабирование",
+    subtitle: "Рост и передача",
+    description: "Масштабируем сработавшее, фиксируем руководства, обучаем команду, план на квартал",
+    deliverables: ["Руководства v1.0", "Обучение команды", "План на 2 квартала"]
   }
 ];
 
@@ -105,13 +105,13 @@ const Process = () => {
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">📚</div>
-                <p className="font-semibold mb-2">Плейбуки v1.0</p>
+                <p className="font-semibold mb-2">Руководства v1.0</p>
                 <p className="text-sm text-white/90">По всем 5 рычагам для самостоятельной работы</p>
               </div>
               <div>
                 <div className="text-4xl font-bold mb-2">🚀</div>
                 <p className="font-semibold mb-2">План масштабирования</p>
-                <p className="text-sm text-white/90">ROMI, ресурсы, roadmap на 2 квартала</p>
+                <p className="text-sm text-white/90">ROMI, ресурсы, дорожная карта на 2 квартала</p>
               </div>
             </div>
           </div>
