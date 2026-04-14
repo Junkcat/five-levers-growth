@@ -153,6 +153,8 @@ const clientGroups: ClientGroup[] = [
       { name: "МегаФон", logo: "/clients/megafon.png" },
       { name: "Ростелеком", logo: "/clients/rostelecom.png" },
       { name: "Тинькофф", logo: "/clients/tinkoff.png" },
+      { name: "Сбербанк", logo: "/clients/sber.png" },
+      { name: "Альфа-Банк", logo: "/clients/alfabank.png" },
     ],
   },
   {
