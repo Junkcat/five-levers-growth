@@ -130,7 +130,7 @@ const cases = [
   },
 ];
 
-interface ClientEntry { name: string; logo?: string; }
+interface ClientEntry { name: string; logo?: string; flag?: string; }
 interface ClientGroup { country: string; clients: ClientEntry[]; more?: string; }
 
 const clientGroups: ClientGroup[] = [
@@ -156,29 +156,14 @@ const clientGroups: ClientGroup[] = [
     ],
   },
   {
-    country: "Казахстан",
+    country: "СНГ",
     clients: [
-      { name: "Bereke Bank", logo: "https://logo.clearbit.com/berekebank.kz" },
-      { name: "Freedom Finance", logo: "https://logo.clearbit.com/ffin.kz" },
-    ],
-  },
-  {
-    country: "Азербайджан",
-    clients: [
-      { name: "Unibank", logo: "https://logo.clearbit.com/unibank.az" },
-    ],
-  },
-  {
-    country: "Узбекистан",
-    clients: [
-      { name: "Hamkorbank", logo: "https://logo.clearbit.com/hamkorbank.uz" },
-      { name: "SQB Bank", logo: "https://logo.clearbit.com/sqb.uz" },
-    ],
-  },
-  {
-    country: "Кыргызстан",
-    clients: [
-      { name: "Eldik Bank", logo: "https://logo.clearbit.com/eldikbank.kg" },
+      { name: "Bereke Bank", logo: "https://logo.clearbit.com/berekebank.kz", flag: "🇰🇿" },
+      { name: "Freedom Finance", logo: "https://logo.clearbit.com/ffin.kz", flag: "🇰🇿" },
+      { name: "Unibank", logo: "https://logo.clearbit.com/unibank.az", flag: "🇦🇿" },
+      { name: "Hamkorbank", logo: "https://logo.clearbit.com/hamkorbank.uz", flag: "🇺🇿" },
+      { name: "SQB Bank", logo: "https://logo.clearbit.com/sqb.uz", flag: "🇺🇿" },
+      { name: "Eldik Bank", logo: "https://logo.clearbit.com/eldikbank.kg", flag: "🇰🇬" },
     ],
   },
 ];
@@ -187,19 +172,25 @@ const LogoItem = ({ client }: { client: ClientEntry }) => {
   const [err, setErr] = useState(false);
   if (client.logo && !err) {
     return (
-      <div className="flex items-center justify-center h-10 px-3 grayscale hover:grayscale-0 transition-all duration-300" title={client.name}>
+      <div className="relative flex items-center justify-center h-10 px-3 grayscale hover:grayscale-0 transition-all duration-300" title={client.name}>
         <img
           src={client.logo}
           alt={client.name}
           className="max-h-8 max-w-[110px] object-contain"
           onError={() => setErr(true)}
         />
+        {client.flag && (
+          <span className="absolute -bottom-1 -right-1 text-[11px] leading-none">{client.flag}</span>
+        )}
       </div>
     );
   }
   return (
-    <div className="flex items-center justify-center h-10 px-3 rounded-md border border-border bg-muted/40">
+    <div className="relative flex items-center justify-center h-10 px-3 rounded-md border border-border bg-muted/40">
       <span className="text-xs font-medium text-muted-foreground whitespace-nowrap">{client.name}</span>
+      {client.flag && (
+        <span className="absolute -bottom-1 -right-1 text-[11px] leading-none">{client.flag}</span>
+      )}
     </div>
   );
 };
