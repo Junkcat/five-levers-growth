@@ -117,7 +117,7 @@ const Index = () => {
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
           />
         </div>
-        <div className="container mx-auto px-4 relative z-10 pt-20">
+        <div className="container mx-auto px-4 relative z-10 pt-20 pb-16">
           <div className="max-w-4xl mx-auto text-center text-white">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Архитектор продуктовых систем роста
