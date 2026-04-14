@@ -73,7 +73,8 @@ const Header = () => {
                 </button>
 
                 {productsOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-80 bg-white rounded-2xl border border-border shadow-2xl py-3 z-50 overflow-hidden">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 w-80 pt-2 z-50">
+                  <div className="bg-white rounded-2xl border border-border shadow-2xl py-3 overflow-hidden">
                     <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-l border-t border-border rotate-45" />
                     <p className="px-4 pb-2 text-xs font-semibold text-muted-foreground uppercase tracking-widest">Наши продукты</p>
                     <div className="divide-y divide-border/50">
@@ -97,10 +98,11 @@ const Header = () => {
                       })}
                     </div>
                   </div>
+                  </div>
                 )}
               </div>
 
-              <a
+              <
                 href="/cases"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-medium text-foreground/80 hover:text-primary hover:bg-primary-50 transition-all"
               >
