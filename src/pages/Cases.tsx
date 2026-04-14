@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Users, GraduationCap, Building2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import ContactDialog from "@/components/ContactDialog";
 
@@ -138,8 +138,7 @@ const clients = [
   { country: "Кыргызстан", list: "Eldik Bank" },
 ];
 
-const CaseCard = ({ c, index }: { c: typeof cases[0]; index: number }) => {
-  const [open, setOpen] = useState(false);
+const CaseCard = ({ c }: { c: typeof cases[0]; index: number }) => {
   return (
     <Card className="overflow-hidden border-2 hover:border-primary-300 hover:shadow-xl transition-all duration-300 bg-white group">
       {/* Цветная шапка с метриками */}
