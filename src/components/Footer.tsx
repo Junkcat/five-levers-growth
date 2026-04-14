@@ -56,10 +56,10 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
-          <p>© 2025 FiveLevers. Move what moves the P&L.</p>
+          <p>© 2026 FiveLevers. Move what moves the P&L.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#privacy" className="hover:text-white transition-colors">Политика конфиденциальности</a>
-            <a href="#terms" className="hover:text-white transition-colors">Условия использования</a>
+            <a href="/privacy" className="hover:text-white transition-colors">Политика конфиденциальности</a>
+            <a href="/terms" className="hover:text-white transition-colors">Условия использования</a>
           </div>
         </div>
       </div>
