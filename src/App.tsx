@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Scaling from "./pages/Scaling";
 import ValidateIdea from "./pages/ValidateIdea";
+import Assessment from "./pages/Assessment";
+import ProductFactory from "./pages/ProductFactory";
+import Training from "./pages/Training";
+import PortfolioProcesses from "./pages/PortfolioProcesses";
 import ComingSoon from "./pages/ComingSoon";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
@@ -24,10 +28,11 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/scaling" element={<Scaling />} />
           <Route path="/validate-idea" element={<ValidateIdea />} />
-          <Route path="/product-factory" element={<ComingSoon title="Продуктовая фабрика" description="Создание фреймворка работы продуктовой фабрики: процессы, ритуалы, метрики и инструменты для системного запуска продуктов." />} />
-          <Route path="/assessment" element={<ComingSoon title="Ассесмент продактов" description="Комплексная оценка компетенций продуктовых менеджеров: hard и soft skills, зоны роста, индивидуальные планы развития." />} />
-          <Route path="/role-profile" element={<ComingSoon title="Профиль роли продакта" description="Формирование профиля роли продакт-менеджера под специфику вашей компании: грейды, навыки, KPI, карьерные треки." />} />
-          <Route path="/training" element={<ComingSoon title="Обучение продуктовых команд" description="Практическое обучение продуктовых команд: воркшопы, менторинг, кейс-стади на реальных продуктах вашей компании." />} />
+          <Route path="/product-factory" element={<ProductFactory />} />
+          <Route path="/assessment" element={<Assessment />} />
+          <Route path="/role-profile" element={<PortfolioProcesses />} />
+          <Route path="/portfolio-processes" element={<PortfolioProcesses />} />
+          <Route path="/training" element={<Training />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cases" element={<Cases />} />
