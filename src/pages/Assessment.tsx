@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
@@ -62,6 +63,12 @@ const Assessment = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Ассесмент продактов — оценка компетенций владельцев продукта | FiveLevers</title>
+        <meta name="description" content="Комплексная оценка Hard и Soft навыков продуктовых специалистов по грейдам Junior/Middle/Senior. Матрица компетенций, гайды для найма, индивидуальные планы развития." />
+        <meta name="keywords" content="ассесмент продактов, оценка компетенций, product owner, матрица компетенций, найм продактов, грейды продакт менеджер" />
+        <link rel="canonical" href="https://5levers.pro/assessment" />
+      </Helmet>
       <Header />
 
       {/* Hero */}

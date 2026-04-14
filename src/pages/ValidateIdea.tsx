@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
@@ -77,6 +78,12 @@ const ValidateIdea = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Проверка гипотез с ИИ — акселерация продуктовых команд | FiveLevers</title>
+        <meta name="description" content="Формирование и проверка продуктовых гипотез с помощью ИИ-платформы. До 12 гипотез в месяц на команду за 12 недель. Акселерация продуктовых команд в крупных компаниях." />
+        <meta name="keywords" content="проверка гипотез, искусственный интеллект, продуктовые гипотезы, акселерация команд, product discovery, CustDev, ИИ-платформа" />
+        <link rel="canonical" href="https://5levers.pro/validate-idea" />
+      </Helmet>
       <Header />
 
       {/* Hero */}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
@@ -53,6 +54,12 @@ const Training = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Обучение продуктовых команд — Школа владельцев продукта | FiveLevers</title>
+        <meta name="description" content="Корпоративная школа владельцев продукта на реальных инициативах компании. 4-этапный фреймворк: от генерации идей до масштабирования. От 20 участников, 4 месяца." />
+        <meta name="keywords" content="обучение продуктовых команд, школа владельцев продукта, корпоративное обучение, product owner, продуктовый фреймворк" />
+        <link rel="canonical" href="https://5levers.pro/training" />
+      </Helmet>
       <Header />
 
       {/* Hero */}

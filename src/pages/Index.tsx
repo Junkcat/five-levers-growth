@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -105,6 +106,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>FiveLevers — Архитектор продуктовых систем роста</title>
+        <meta name="description" content="Продуктовый консалтинг для крупного бизнеса: масштабирование продуктов, обучение команд, продуктовые фабрики. 50+ компаний в СНГ, $60М+ измеримый эффект." />
+        <meta name="keywords" content="продуктовый консалтинг, масштабирование продуктов, обучение продуктовых команд, владелец продукта, продуктовая фабрика, OKR, метрики роста, СНГ" />
+        <link rel="canonical" href="https://5levers.pro/" />
+      </Helmet>
       <Header />
 
       {/* Hero */}

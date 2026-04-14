@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
@@ -75,6 +76,12 @@ const ProductFactory = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Продуктовая фабрика — запуск продуктовой функции с нуля | FiveLevers</title>
+        <meta name="description" content="Создание продуктовой функции с нуля: ассесмент кандидатов, запуск кросс-функциональных команд, портфель инициатив, обучение владельцев продукта. От 6 месяцев." />
+        <meta name="keywords" content="продуктовая фабрика, запуск продуктовой функции, владелец продукта, продуктовые команды, портфель инициатив, OKR" />
+        <link rel="canonical" href="https://5levers.pro/product-factory" />
+      </Helmet>
       <Header />
 
       {/* Hero */}

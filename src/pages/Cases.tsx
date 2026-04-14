@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -251,6 +252,12 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Кейсы и результаты — FiveLevers</title>
+        <meta name="description" content="Реальные проекты FiveLevers: Северсталь, СИБУР, Промсвязьбанк, Мосбиржа, Hamkorbank. 50+ компаний в СНГ, $60М+ измеримый эффект, 3 000+ специалистов обучено." />
+        <meta name="keywords" content="кейсы продуктового консалтинга, результаты, Северсталь, СИБУР, Промсвязьбанк, продуктовая трансформация" />
+        <link rel="canonical" href="https://5levers.pro/cases" />
+      </Helmet>
       <Header />
 
       {/* Hero */}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
@@ -86,6 +87,12 @@ const PortfolioProcesses = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Продуктовые портфели — PMO и управление инициативами | FiveLevers</title>
+        <meta name="description" content="Выстраивание процессов управления продуктовым портфелем: сквозной бэклог, OKR и дерево метрик, дашборды мониторинга, обучение PMO. Синхронизация целей компании и команд." />
+        <meta name="keywords" content="портфельное управление, PMO, OKR, дерево метрик, дашборды, управление инициативами, продуктовый портфель" />
+        <link rel="canonical" href="https://5levers.pro/portfolio-processes" />
+      </Helmet>
       <Header />
 
       {/* Hero */}
