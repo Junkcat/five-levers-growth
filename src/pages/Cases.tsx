@@ -20,7 +20,7 @@ const cases = [
     period: "2020 – наст. вр.",
     gradient: "from-primary-600 to-primary-800",
     metrics: [
-      { value: "$50M+", label: "прибыль от продуктовых инициатив за 6 лет" },
+      { value: "$XXМ+", label: "прибыль от продуктовых инициатив за 6 лет" },
       { value: "100+", label: "продактов обучено на реальных инициативах" },
       { value: "100+", label: "инициатив запущено в продуктовом портфеле" },
     ],
@@ -31,7 +31,7 @@ const cases = [
       "Организована команда внешних трекеров для сопровождения инициатив",
       "Спроектирована система мотивации продактов совместно с CnB-подразделением",
     ],
-    result: "За 6 лет — с нуля до самовоспроизводящейся продуктовой лаборатории. $50M+ прибыли, 100+ обученных продактов, 100+ запущенных инициатив.",
+    result: "За 6 лет — с нуля до самовоспроизводящейся продуктовой лаборатории. $XXМ+ прибыли, 100+ обученных продактов, 100+ запущенных инициатив.",
   },
   {
     company: "СИБУР",
@@ -39,8 +39,8 @@ const cases = [
     period: "2020 – 2023",
     gradient: "from-accent-500 to-primary-600",
     metrics: [
-      { value: "350+", label: "человек обучено (40+ цифровых ролей)" },
-      { value: "1", label: "собственная цифровая платформа для обучения" },
+      { value: "350", label: "человек обучено работе в Stage Gates" },
+      { value: "500+", label: "человек обучено в 40 цифровых ролях" },
       { value: "40+", label: "ролей в центре экспертиз" },
     ],
     challenge: "100 продуктовых сотрудников работали без единых стандартов: у каждой команды — свои процессы, нет единого фреймворка, хаос в артефактах и подходах.",
@@ -50,7 +50,7 @@ const cases = [
       "Сформирован центр экспертиз: обучены внутренние эксперты — продолжили развивать методологию",
       "Создана собственная цифровая образовательная платформа (40+ ролей, СИБУР Диджитал)",
     ],
-    result: "350 сотрудников прошли обучение. Методология оцифрована. Платформа и центр экспертиз продолжили работу после завершения проекта.",
+    result: "350 сотрудников обучено работе в Stage Gates, 500+ — по 40 цифровым ролям. Методология оцифрована. Платформа и центр экспертиз продолжили работу после завершения проекта.",
   },
   {
     company: "Промсвязьбанк",
@@ -77,7 +77,7 @@ const cases = [
     period: "2021 – 2023",
     gradient: "from-primary-800 to-accent-500",
     metrics: [
-      { value: "200M+", label: "руб. прибыли от нестраховых инициатив" },
+      { value: "XXXМ+", label: "руб. прибыли от нестраховых инициатив" },
       { value: "100+", label: "продактов обучено (внутренние + студенты)" },
       { value: "200+", label: "инициатив в портфеле, 30+ запущено в работу" },
     ],
@@ -88,7 +88,7 @@ const cases = [
       "Собран и приоритизирован портфель 200+ инициатив, 30+ запущены в работу",
       "Выстроены портфельное управление, фреймворк работы и система мотивации",
     ],
-    result: "С нуля — до работающего подразделения с 200M+ руб. прибыли от нестраховых инициатив и защищённой стратегией развития.",
+    result: "С нуля — до работающего подразделения с XXXМ+ руб. прибыли от нестраховых инициатив и защищённой стратегией развития.",
   },
   {
     company: "Hamkorbank",
@@ -96,7 +96,7 @@ const cases = [
     period: "2022 – 2023",
     gradient: "from-accent-500 to-accent-600",
     metrics: [
-      { value: "$10M", label: "выручка от новых продуктов за год" },
+      { value: "$XXМ", label: "выручка от новых продуктов за год" },
       { value: "12", label: "человек в новом продуктовом подразделении" },
       { value: "15", label: "топ-менеджеров прошли обучение стратегии" },
     ],
@@ -107,7 +107,7 @@ const cases = [
       "Запущены новые продукты: телемаркетинг, агентские продажи автокредитов, интернет-эквайринг",
       "Банк научился считать бизнес-эффект и работать с клиентской сегментацией",
     ],
-    result: "$10M выручки от новых продуктов ($8.5M — эквайринг, $1.5M — кредиты). Сформировано полноценное продуктовое подразделение с нуля.",
+    result: "$XXМ выручки от новых продуктов. Сформировано полноценное продуктовое подразделение с нуля.",
   },
   {
     company: "Мосбиржа",
@@ -121,7 +121,7 @@ const cases = [
     ],
     challenge: "В подразделении финансовых услуг — разные уровни компетенций, нет единого фреймворка. Для масштабирования нужны стандарты, ролевая модель и система оценки.",
     actions: [
-      "Разработан и внедрён продуктовый фреймворк для FinServices (40 чел., 10 внутренних экспертов)",
+      "Разработан и внедрён продуктовый фреймворк для Финуслуг (40 чел., 10 внутренних экспертов)",
       "Запущена Школа владельцев продуктов для других подразделений биржи (35 чел., роль Junior PM)",
       "Разработана ролевая модель продакта с 9 грейдами и компетенциями для ассесмента",
       "Спроектированы система мотивации и ассесмент на основе продуктовых артефактов",
@@ -130,13 +130,79 @@ const cases = [
   },
 ];
 
-const clients = [
-  { country: "Россия", list: "СИБУР · Северсталь · Промсвязьбанк · Ингосстрах · Ингосстрах Инвестиции · Мосбиржа · Золотое яблоко · DPD · Совкомбанк · Газпромнефть · Газпромбанк · Росатом · Мегафон · Ростелеком · Тинькофф и 20+ других" },
-  { country: "Казахстан", list: "Bereke Bank · Feedom Finance" },
-  { country: "Азербайджан", list: "Unibank" },
-  { country: "Узбекистан", list: "Hamkorbank · SQB Bank" },
-  { country: "Кыргызстан", list: "Eldik Bank" },
+interface ClientEntry { name: string; logo?: string; }
+interface ClientGroup { country: string; clients: ClientEntry[]; more?: string; }
+
+const clientGroups: ClientGroup[] = [
+  {
+    country: "Россия",
+    more: "и 20+ других",
+    clients: [
+      { name: "СИБУР", logo: "https://logo.clearbit.com/sibur.ru" },
+      { name: "Северсталь", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Severstal_logo.svg/320px-Severstal_logo.svg.png" },
+      { name: "Промсвязьбанк", logo: "https://logo.clearbit.com/psbank.ru" },
+      { name: "Ингосстрах", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Ingosstrakh_New_Logo.svg/320px-Ingosstrakh_New_Logo.svg.png" },
+      { name: "Ингосстрах Инвестиции" },
+      { name: "Мосбиржа", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Moscow_Exchange_Logo.svg/250px-Moscow_Exchange_Logo.svg.png" },
+      { name: "Золотое яблоко", logo: "https://logo.clearbit.com/goldapple.ru" },
+      { name: "DPD", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/DPD_logo_%282015%29.svg/200px-DPD_logo_%282015%29.svg.png" },
+      { name: "Совкомбанк", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sovcombank_new_logo_eng.svg/320px-Sovcombank_new_logo_eng.svg.png" },
+      { name: "Газпром нефть", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gazprom_Neft_-_logo.png" },
+      { name: "Газпромбанк", logo: "https://logo.clearbit.com/gazprombank.ru" },
+      { name: "Росатом", logo: "https://logo.clearbit.com/rosatom.ru" },
+      { name: "МегаФон", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/MegaFon_logo.svg/250px-MegaFon_logo.svg.png" },
+      { name: "Ростелеком", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Rostelecom_logo_English_2018.svg/320px-Rostelecom_logo_English_2018.svg.png" },
+      { name: "Тинькофф", logo: "https://logo.clearbit.com/tinkoff.ru" },
+    ],
+  },
+  {
+    country: "Казахстан",
+    clients: [
+      { name: "Bereke Bank", logo: "https://logo.clearbit.com/berekebank.kz" },
+      { name: "Freedom Finance", logo: "https://logo.clearbit.com/ffin.kz" },
+    ],
+  },
+  {
+    country: "Азербайджан",
+    clients: [
+      { name: "Unibank", logo: "https://logo.clearbit.com/unibank.az" },
+    ],
+  },
+  {
+    country: "Узбекистан",
+    clients: [
+      { name: "Hamkorbank", logo: "https://logo.clearbit.com/hamkorbank.uz" },
+      { name: "SQB Bank", logo: "https://logo.clearbit.com/sqb.uz" },
+    ],
+  },
+  {
+    country: "Кыргызстан",
+    clients: [
+      { name: "Eldik Bank", logo: "https://logo.clearbit.com/eldikbank.kg" },
+    ],
+  },
 ];
+
+const LogoItem = ({ client }: { client: ClientEntry }) => {
+  const [err, setErr] = useState(false);
+  if (client.logo && !err) {
+    return (
+      <div className="flex items-center justify-center h-10 px-3 grayscale hover:grayscale-0 transition-all duration-300" title={client.name}>
+        <img
+          src={client.logo}
+          alt={client.name}
+          className="max-h-8 max-w-[110px] object-contain"
+          onError={() => setErr(true)}
+        />
+      </div>
+    );
+  }
+  return (
+    <div className="flex items-center justify-center h-10 px-3 rounded-md border border-border bg-muted/40">
+      <span className="text-xs font-medium text-muted-foreground whitespace-nowrap">{client.name}</span>
+    </div>
+  );
+};
 
 const CaseCard = ({ c }: { c: typeof cases[0]; index: number }) => {
   return (
@@ -249,17 +315,25 @@ const Cases = () => {
 
       {/* Клиенты */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">Клиенты и география</h2>
             <p className="text-lg text-muted-foreground">50+ компаний в 5 странах СНГ</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {clients.map((cl, i) => (
-              <Card key={i} className={`p-6 border-2 ${i === 0 ? 'md:col-span-2' : ''}`}>
-                <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-2">{cl.country}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{cl.list}</p>
-              </Card>
+          <div className="space-y-10">
+            {clientGroups.map((group, gi) => (
+              <div key={gi}>
+                <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-4">{group.country}</p>
+                <div className="flex flex-wrap gap-3 items-center">
+                  {group.clients.map((cl, ci) => (
+                    <LogoItem key={ci} client={cl} />
+                  ))}
+                  {group.more && (
+                    <span className="text-xs text-muted-foreground px-3">{group.more}</span>
+                  )}
+                </div>
+                {gi < clientGroups.length - 1 && <div className="mt-8 border-b border-border" />}
+              </div>
             ))}
           </div>
         </div>
@@ -270,7 +344,7 @@ const Cases = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-4">Готовы к диагностике?</h2>
           <p className="text-xl text-white/85 mb-8 max-w-xl mx-auto">
-            Получите draft-план за 48 часов на основе ваших метрик
+            Получите план работ за 48 часов на основе вашей проблематики
           </p>
           <Button
             size="lg"

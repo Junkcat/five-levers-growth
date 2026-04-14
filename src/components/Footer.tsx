@@ -31,7 +31,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Ресурсы</h3>
             <ul className="space-y-2 text-sm text-neutral-400">
-              <li><a href="#cases" className="hover:text-white transition-colors">Кейсы</a></li>
+              <li><a href="/cases" className="hover:text-white transition-colors">Кейсы</a></li>
               <li><a href="#academy" className="hover:text-white transition-colors">Академия</a></li>
               <li><a href="#playbooks" className="hover:text-white transition-colors">Плейбуки</a></li>
               <li><a href="#blog" className="hover:text-white transition-colors">Блог</a></li>
