@@ -142,7 +142,6 @@ const clientGroups: ClientGroup[] = [
       { name: "Северсталь", logo: "/clients/severstal.png" },
       { name: "Промсвязьбанк", logo: "/clients/psb.png" },
       { name: "Ингосстрах", logo: "/clients/ingosstrakh.png" },
-      { name: "Ингосстрах Инвестиции" },
       { name: "Мосбиржа", logo: "/clients/moex.png" },
       { name: "Золотое яблоко", logo: "/clients/goldapple.png" },
       { name: "DPD", logo: "/clients/dpd.png" },
