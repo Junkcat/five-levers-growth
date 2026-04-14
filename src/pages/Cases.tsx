@@ -258,7 +258,6 @@ const Cases = () => {
         <div className="absolute inset-0 gradient-hero opacity-95" />
         <div className="container mx-auto px-4 relative z-10 pt-20">
           <div className="max-w-4xl mx-auto text-center text-white py-16">
-            <p className="text-white/70 text-sm font-semibold uppercase tracking-widest mb-4">Портфолио проектов · 2020–2026</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               Кейсы и результаты
             </h1>
