@@ -102,7 +102,7 @@ const Header = () => {
                 )}
               </div>
 
-              <
+              <a
                 href="/cases"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg text-base font-medium text-foreground/80 hover:text-primary hover:bg-primary-50 transition-all"
               >
