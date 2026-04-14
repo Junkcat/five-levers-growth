@@ -338,9 +338,9 @@ const Cases = () => {
           <Button
             size="lg"
             onClick={() => setDialogOpen(true)}
-            className="bg-white text-primary-800 hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold"
+            className="bg-white text-primary-800 hover:bg-white/90 text-lg px-8 py-6 h-auto font-semibold w-full sm:w-auto"
           >
-            Запросить диагностическую сессию
+            Запросить диагностику
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
