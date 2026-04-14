@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 import logoImage from "@/assets/logo-full.png";
 import ContactDialog from "./ContactDialog";
 
 const Header = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [requestType, setRequestType] = useState<string>("Запрос диагностики");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleContactClick = () => {
     setRequestType("Запрос диагностики");
@@ -13,8 +16,14 @@ const Header = () => {
   };
 
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate("/");
+    }
   };
+
+  const isScalingPage = location.pathname === "/scaling";
 
   return (
     <>
@@ -31,18 +40,25 @@ const Header = () => {
             </div>
             
             <nav className="hidden md:flex items-center gap-8">
-              <a href="#methodology" className="text-sm font-medium hover:text-primary transition-colors">
-                Методология
+              <a onClick={() => navigate("/")} className="text-sm font-medium hover:text-primary transition-colors cursor-pointer">
+                Продукты
               </a>
-              <a href="#process" className="text-sm font-medium hover:text-primary transition-colors">
-                Процесс
-              </a>
-              <a href="#results" className="text-sm font-medium hover:text-primary transition-colors">
-                Результаты
-              </a>
-              <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
-                Цены
-              </a>
+              {isScalingPage && (
+                <>
+                  <a href="#methodology" className="text-sm font-medium hover:text-primary transition-colors">
+                    Методология
+                  </a>
+                  <a href="#process" className="text-sm font-medium hover:text-primary transition-colors">
+                    Процесс
+                  </a>
+                  <a href="#results" className="text-sm font-medium hover:text-primary transition-colors">
+                    Результаты
+                  </a>
+                  <a href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
+                    Цены
+                  </a>
+                </>
+              )}
               <Button onClick={handleContactClick} size="sm">
                 Связаться
               </Button>
