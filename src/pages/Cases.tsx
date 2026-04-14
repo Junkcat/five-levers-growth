@@ -138,32 +138,32 @@ const clientGroups: ClientGroup[] = [
     country: "Россия",
     more: "и 20+ других",
     clients: [
-      { name: "СИБУР", logo: "https://logo.clearbit.com/sibur.ru" },
-      { name: "Северсталь", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Severstal_logo.svg/320px-Severstal_logo.svg.png" },
-      { name: "Промсвязьбанк", logo: "https://logo.clearbit.com/psbank.ru" },
-      { name: "Ингосстрах", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Ingosstrakh_New_Logo.svg/320px-Ingosstrakh_New_Logo.svg.png" },
+      { name: "СИБУР", logo: "/clients/sibur.png" },
+      { name: "Северсталь", logo: "/clients/severstal.png" },
+      { name: "Промсвязьбанк", logo: "/clients/psb.png" },
+      { name: "Ингосстрах", logo: "/clients/ingosstrakh.png" },
       { name: "Ингосстрах Инвестиции" },
       { name: "Мосбиржа", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Moscow_Exchange_Logo.svg/250px-Moscow_Exchange_Logo.svg.png" },
-      { name: "Золотое яблоко", logo: "https://logo.clearbit.com/goldapple.ru" },
+      { name: "Золотое яблоко", logo: "/clients/goldapple.png" },
       { name: "DPD", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/DPD_logo_%282015%29.svg/200px-DPD_logo_%282015%29.svg.png" },
-      { name: "Совкомбанк", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Sovcombank_new_logo_eng.svg/320px-Sovcombank_new_logo_eng.svg.png" },
+      { name: "Совкомбанк", logo: "/clients/sovkombank.png" },
       { name: "Газпром нефть", logo: "https://upload.wikimedia.org/wikipedia/commons/7/7e/Gazprom_Neft_-_logo.png" },
-      { name: "Газпромбанк", logo: "https://logo.clearbit.com/gazprombank.ru" },
-      { name: "Росатом", logo: "https://logo.clearbit.com/rosatom.ru" },
-      { name: "МегаФон", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/MegaFon_logo.svg/250px-MegaFon_logo.svg.png" },
-      { name: "Ростелеком", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Rostelecom_logo_English_2018.svg/320px-Rostelecom_logo_English_2018.svg.png" },
-      { name: "Тинькофф", logo: "https://logo.clearbit.com/tinkoff.ru" },
+      { name: "Газпромбанк", logo: "/clients/gazprombank.png" },
+      { name: "Росатом", logo: "/clients/rosatom.png" },
+      { name: "МегаФон", logo: "/clients/megafon.png" },
+      { name: "Ростелеком", logo: "/clients/rostelecom.png" },
+      { name: "Тинькофф", logo: "/clients/tinkoff.png" },
     ],
   },
   {
     country: "СНГ",
     clients: [
-      { name: "Bereke Bank", logo: "https://logo.clearbit.com/berekebank.kz", flag: "🇰🇿" },
-      { name: "Freedom Finance", logo: "https://logo.clearbit.com/ffin.kz", flag: "🇰🇿" },
-      { name: "Unibank", logo: "https://logo.clearbit.com/unibank.az", flag: "🇦🇿" },
-      { name: "Hamkorbank", logo: "https://logo.clearbit.com/hamkorbank.uz", flag: "🇺🇿" },
-      { name: "SQB Bank", logo: "https://logo.clearbit.com/sqb.uz", flag: "🇺🇿" },
-      { name: "Eldik Bank", logo: "https://logo.clearbit.com/eldikbank.kg", flag: "🇰🇬" },
+      { name: "Bereke Bank", logo: "/clients/bereke.png", flag: "🇰🇿" },
+      { name: "Freedom Finance", logo: "/clients/freedom.png", flag: "🇰🇿" },
+      { name: "Unibank", logo: "/clients/unibank.webp", flag: "🇦🇿" },
+      { name: "Hamkorbank", logo: "/clients/hamkorbank.png", flag: "🇺🇿" },
+      { name: "SQB Bank", logo: "/clients/sqb.png", flag: "🇺🇿" },
+      { name: "Eldik Bank", logo: "/clients/eldik.png", flag: "🇰🇬" },
     ],
   },
 ];
@@ -172,7 +172,7 @@ const LogoItem = ({ client }: { client: ClientEntry }) => {
   const [err, setErr] = useState(false);
   if (client.logo && !err) {
     return (
-      <div className="relative flex items-center justify-center h-10 px-3 grayscale hover:grayscale-0 transition-all duration-300" title={client.name}>
+      <div className="relative flex items-center justify-center h-10 px-3" title={client.name}>
         <img
           src={client.logo}
           alt={client.name}
