@@ -5,7 +5,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Rocket, Brain, Factory, UserCheck, Users, GraduationCap, Lock, Target, Layers, TrendingUp, Zap } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import heroImage from "@/assets/hero-growth.webp";
 
 const products = [
   {
@@ -111,7 +110,6 @@ const Index = () => {
         <meta name="description" content="Продуктовый консалтинг для крупного бизнеса: масштабирование продуктов, обучение команд, продуктовые фабрики. 50+ компаний в СНГ, $60М+ измеримый эффект." />
         <meta name="keywords" content="продуктовый консалтинг, масштабирование продуктов, обучение продуктовых команд, владелец продукта, продуктовая фабрика, OKR, метрики роста, СНГ" />
         <link rel="canonical" href="https://5levers.pro/" />
-        <link rel="preload" as="image" href={heroImage} />
       </Helmet>
       <Header />
 
@@ -120,7 +118,7 @@ const Index = () => {
         <div className="absolute inset-0 gradient-hero opacity-95" />
         <div className="absolute inset-0">
           <img
-            src={heroImage}
+            src="/hero-growth.webp"
             alt="Business growth analytics"
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
             fetchPriority="high"

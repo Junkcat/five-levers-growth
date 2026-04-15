@@ -1,4 +1,4 @@
-import logoImage from "@/assets/logo-icon.png";
+import logoImage from "@/assets/logo-icon.webp";
 
 const Footer = () => {
   return (

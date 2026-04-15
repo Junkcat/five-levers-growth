@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-growth.webp";
 import ContactDialog from "./ContactDialog";
 
 const Hero = () => {
@@ -23,7 +22,7 @@ const Hero = () => {
       <div className="absolute inset-0 gradient-hero opacity-95" />
       <div className="absolute inset-0">
         <img 
-          src={heroImage} 
+          src="/hero-growth.webp"
           alt="Business growth analytics dashboard"
           className="w-full h-full object-cover mix-blend-overlay opacity-30"
         />
