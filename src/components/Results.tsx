@@ -153,7 +153,7 @@ const Results = () => {
                       </li>
                       <li className="flex items-start">
                         <span className="mr-2 text-primary-600 font-bold">•</span>
-                        <span>Атрибуция к выдаче/марже (CPD, unit-экономика по когорте), а не к регистрации.</span>
+                        <span>Атрибуция к выдаче/марже (CPD, unit-экономика по когорте), без привязки к регистрации.</span>
                       </li>
                     </ul>
                   </div>
