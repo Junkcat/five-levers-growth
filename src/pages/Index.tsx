@@ -52,7 +52,7 @@ const products = [
     icon: Users,
     title: "Продуктовые портфели",
     subtitle: "Порядок в инициативах",
-    description: "Когда проектов много, а понять что важно — сложно. Наводим порядок: единый бэклог, цели связаны с метриками, руководство видит реальную картину, а не слайды.",
+    description: "Когда проектов много, а понять что важно — сложно. Наводим порядок: единый бэклог, цели связаны с метриками, руководство видит реальную картину происходящего.",
     tags: ["Портфель", "Дерево метрик", "Дашборды"],
     link: "/portfolio-processes",
     available: true,
@@ -166,7 +166,7 @@ const Index = () => {
             <div>
               <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">О нас</p>
               <h2 className="text-4xl font-bold text-foreground mb-6 leading-tight">
-                Делаем руками, а не советуем со стороны
+                Приходим и делаем вместе с командой
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Большинство консультантов приносят презентацию и уходят.
