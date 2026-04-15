@@ -68,6 +68,8 @@ const Header = () => {
                 src={logoImage}
                 alt="FiveLevers - Пять рычагов роста"
                 className="h-14 w-auto drop-shadow-sm cursor-pointer"
+                width={384}
+                height={112}
                 onClick={handleLogoClick}
               />
             </div>

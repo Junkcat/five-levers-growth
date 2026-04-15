@@ -122,6 +122,7 @@ const Index = () => {
             src={heroImage}
             alt="Business growth analytics"
             className="w-full h-full object-cover mix-blend-overlay opacity-30"
+            fetchPriority="high"
           />
         </div>
         <div className="container mx-auto px-4 relative z-10 pt-20 pb-16">
