@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -13,18 +13,18 @@ const ScrollToTop = () => {
   }, [pathname]);
   return null;
 };
-import Index from "./pages/Index";
-import Scaling from "./pages/Scaling";
-import ValidateIdea from "./pages/ValidateIdea";
-import Assessment from "./pages/Assessment";
-import ProductFactory from "./pages/ProductFactory";
-import Training from "./pages/Training";
-import PortfolioProcesses from "./pages/PortfolioProcesses";
-import ComingSoon from "./pages/ComingSoon";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import Cases from "./pages/Cases";
-import NotFound from "./pages/NotFound";
+
+const Index = lazy(() => import("./pages/Index"));
+const Scaling = lazy(() => import("./pages/Scaling"));
+const ValidateIdea = lazy(() => import("./pages/ValidateIdea"));
+const Assessment = lazy(() => import("./pages/Assessment"));
+const ProductFactory = lazy(() => import("./pages/ProductFactory"));
+const Training = lazy(() => import("./pages/Training"));
+const PortfolioProcesses = lazy(() => import("./pages/PortfolioProcesses"));
+const Privacy = lazy(() => import("./pages/Privacy"));
+const Terms = lazy(() => import("./pages/Terms"));
+const Cases = lazy(() => import("./pages/Cases"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -36,20 +36,22 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/scaling" element={<Scaling />} />
-          <Route path="/validate-idea" element={<ValidateIdea />} />
-          <Route path="/product-factory" element={<ProductFactory />} />
-          <Route path="/assessment" element={<Assessment />} />
-          <Route path="/role-profile" element={<PortfolioProcesses />} />
-          <Route path="/portfolio-processes" element={<PortfolioProcesses />} />
-          <Route path="/training" element={<Training />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/cases" element={<Cases />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/scaling" element={<Scaling />} />
+            <Route path="/validate-idea" element={<ValidateIdea />} />
+            <Route path="/product-factory" element={<ProductFactory />} />
+            <Route path="/assessment" element={<Assessment />} />
+            <Route path="/role-profile" element={<PortfolioProcesses />} />
+            <Route path="/portfolio-processes" element={<PortfolioProcesses />} />
+            <Route path="/training" element={<Training />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cases" element={<Cases />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
