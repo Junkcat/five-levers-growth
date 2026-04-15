@@ -15,7 +15,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import logoImage from "@/assets/logo-full.png";
+import logoImage from "@/assets/logo-full.webp";
 import ContactDialog from "./ContactDialog";
 
 const productLinks = [

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-growth.jpg";
+import heroImage from "@/assets/hero-growth.webp";
 import ContactDialog from "./ContactDialog";
 
 const Hero = () => {
