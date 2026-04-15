@@ -34,7 +34,7 @@ const levers = [
     title: "Economics",
     subtitle: "Экономика",
     description: "Прайсинг, юнит-экономика, contribution margin",
-    metrics: ["CM1/CM2", "Payback", "Price elasticity"],
+    metrics: ["CM1/CM2", "Срок окупаемости", "Эластичность цены"],
     impact: "+3–8 п.п. к марже",
     color: "from-accent-500 to-accent-600"
   },

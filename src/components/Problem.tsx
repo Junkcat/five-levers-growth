@@ -28,7 +28,7 @@ const Problem = () => {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-error mt-1">●</span>
-                <span>«Дырявая» юнит-экономика, непонятный payback</span>
+                <span>Юнит-экономика не сходится, срок окупаемости непонятен</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-error mt-1">●</span>
