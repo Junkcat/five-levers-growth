@@ -14,19 +14,19 @@ const problems = [
   "После стратегических встреч не остаётся чёткого плана действий на квартал",
 ];
 
-const days = [
+const modules = [
   {
-    num: "День 1",
-    title: "Продуктовый подход и генерация гипотез",
+    num: "Модуль 1",
+    title: "Продуктовый подход и целевые сегменты",
     items: [
       "Синхронизация по продуктовому фреймворку: продукт / инициатива / эпик / гипотеза",
       "Выбор 1–2 целевых клиентских сегментов на команду",
       "Карта клиентских проблем: топ-5 болей и барьеров по сегменту",
-      "Генерация 15–20 гипотез от проблематики, привязка к OKR/КВЦ",
+      "Генерация 15–20 гипотез от проблематики, привязка к OKR",
     ],
   },
   {
-    num: "День 2",
+    num: "Модуль 2",
     title: "CJM, моменты истины и воронки",
     items: [
       "As-Is CJM по выбранному «событию»: шаги, эмоции, ожидания, каналы",
@@ -36,20 +36,28 @@ const days = [
     ],
   },
   {
-    num: "Дни 3–4",
+    num: "Модуль 3",
     title: "Бэклог гипотез и план экспериментов",
     items: [
       "Приоритизация бэклога единым методом по всем командам",
       "Оформление карточек экспериментов с владельцами и критериями решений",
       "Стандарт качества гипотезы: измеримо / проверяемо / понятен эффект",
-      "Сборка промышленного конвейера гипотез на 6–8 недель",
+      "Сборка конвейера гипотез на 6–8 недель",
     ],
   },
   {
-    num: "День 5",
-    title: "Unit-экономика и операционная модель",
+    num: "Модуль 4",
+    title: "Unit-экономика гипотез",
     items: [
       "Расчёт unit-экономики по топ-гипотезам",
+      "Оценка ожидаемого эффекта до запуска",
+      "Связка гипотез с бизнес-целями и метриками роста",
+    ],
+  },
+  {
+    num: "Модуль 5",
+    title: "Операционная модель",
+    items: [
       "Черновик операционной модели: ритуалы (weekly / monthly / QBR), RACI",
       "Утверждение плана работы на ближайший квартал",
       "Презентация итогов и согласование следующих шагов",
@@ -60,7 +68,7 @@ const days = [
 const deliverables = [
   { icon: Target, title: "Единое видение", desc: "Зафиксированное понимание продуктового подхода и приоритетных клиентских сегментов" },
   { icon: Map, title: "CJM и моменты истины", desc: "Карты клиентских путей с выделенными точками, где решается «выберет / останется / уйдёт»" },
-  { icon: Layers, title: "Приоритизированный бэклог", desc: "Гипотезы от клиентской проблематики с единым стандартом качества и привязкой к OKR/КВЦ" },
+  { icon: Layers, title: "Приоритизированный бэклог", desc: "Гипотезы от клиентской проблематики с единым стандартом качества и привязкой к OKR" },
   { icon: BarChart3, title: "Unit-экономика гипотез", desc: "Расчёт по приоритетным инициативам — понятен ожидаемый эффект до запуска" },
   { icon: FileText, title: "Операционная модель", desc: "RACI, ритуалы и план на квартал — команда знает, кто что делает и когда" },
 ];
@@ -91,11 +99,11 @@ const StrategySessions = () => {
               Стратегические сессии
             </h1>
             <p className="text-xl text-white/85 max-w-2xl mx-auto leading-relaxed mb-10">
-              5 дней интенсивной работы с командой: от выбора сегментов до приоритизированного
+              Интенсивная работа с командой: от выбора сегментов до приоритизированного
               бэклога с unit-экономикой и готовым планом на квартал.
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm mb-10">
-              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> 5 дней</span>
+              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> 5 модулей</span>
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> до 50 человек</span>
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> очно / выезд</span>
             </div>
@@ -117,7 +125,7 @@ const StrategySessions = () => {
               <h2 className="text-4xl font-bold text-foreground mb-6">Цели есть — связки с действиями нет</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Стратегические сессии часто заканчиваются красивой презентацией и общими словами.
-                Мы строим работу иначе: каждый день — конкретный результат, который команда
+                Мы строим работу иначе: каждый модуль — конкретный результат, который команда
                 забирает с собой и сразу использует.
               </p>
             </div>
@@ -138,13 +146,13 @@ const StrategySessions = () => {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Программа</p>
-            <h2 className="text-4xl font-bold text-foreground mb-4">5 дней — 5 результатов</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">5 модулей</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Каждый день завершается конкретным артефактом, который команда использует в работе
+              Каждый модуль завершается конкретным артефактом, который команда использует в работе
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            {days.map((d, i) => (
+            {modules.map((d, i) => (
               <Card key={i} className="p-6 border-2 hover:border-primary-300 hover:shadow-lg transition-all">
                 <div className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-2">{d.num}</div>
                 <h3 className="text-xl font-bold text-foreground mb-4">{d.title}</h3>
