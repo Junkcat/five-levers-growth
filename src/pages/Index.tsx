@@ -212,7 +212,7 @@ const Index = () => {
               return (
                 <Card
                   key={index}
-                  className="p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary-300 bg-white group relative flex flex-col"
+                  className="p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary-300 bg-white group relative"
                 >
                   <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${product.gradient} mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className="h-6 w-6 text-white" />
@@ -232,7 +232,7 @@ const Index = () => {
 
                   <Button
                     onClick={() => navigate(product.link)}
-                    className="w-full gradient-cta text-white mt-auto"
+                    className="w-full gradient-cta text-white"
                   >
                     Подробнее <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
