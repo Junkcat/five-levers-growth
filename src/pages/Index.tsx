@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ContactDialog from "@/components/ContactDialog";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Rocket, Brain, Factory, UserCheck, Users, GraduationCap, Lock, Target, Layers, TrendingUp, Zap, MousePointerClick, CalendarCheck } from "lucide-react";
@@ -132,6 +134,7 @@ const pillars = [
 
 const Index = () => {
   const navigate = useNavigate();
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
     <div className="min-h-screen">
@@ -268,8 +271,12 @@ const Index = () => {
                       Подробнее <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   ) : (
-                    <Button disabled className="w-full mt-auto self-stretch" variant="outline">
-                      Скоро
+                    <Button
+                      onClick={() => setDialogOpen(true)}
+                      className="w-full mt-auto self-stretch"
+                      variant="outline"
+                    >
+                      Получить консультацию
                     </Button>
                   )}
                 </Card>
@@ -305,6 +312,7 @@ const Index = () => {
       </section>
 
       <Footer />
+      <ContactDialog open={dialogOpen} onOpenChange={setDialogOpen} requestType="Консультация по оргизменениям" />
     </div>
   );
 };
