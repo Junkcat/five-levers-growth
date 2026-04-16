@@ -104,7 +104,7 @@ const StrategySessions = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-white/80 text-sm mb-10">
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> 5 модулей</span>
-              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> до 50 человек</span>
+              <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> до 100 человек</span>
               <span className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-accent-400" /> очно / выезд</span>
             </div>
             <Button size="lg" onClick={() => setDialogOpen(true)}
