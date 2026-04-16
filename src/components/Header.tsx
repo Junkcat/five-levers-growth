@@ -14,6 +14,7 @@ import {
   MessageCircle,
   Menu,
   X,
+  MousePointerClick,
 } from "lucide-react";
 import logoImage from "@/assets/logo-full.webp";
 import ContactDialog from "./ContactDialog";
@@ -25,6 +26,7 @@ const productLinks = [
   { title: "Ассесмент продактов", href: "/assessment", icon: UserCheck, desc: "Оценка компетенций" },
   { title: "Продуктовые портфели", href: "/portfolio-processes", icon: Layers, desc: "PMO и управление" },
   { title: "Обучение команд", href: "/training", icon: GraduationCap, desc: "Школа владельцев продукта" },
+  { title: "CX-UX Диагностика", href: "/cx-discovery", icon: MousePointerClick, desc: "Оптимизация конверсии" },
 ];
 
 const Header = () => {

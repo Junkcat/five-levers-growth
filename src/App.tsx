@@ -15,6 +15,7 @@ import PortfolioProcesses from "./pages/PortfolioProcesses";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cases from "./pages/Cases";
+import CxDiscovery from "./pages/CxDiscovery";
 import NotFound from "./pages/NotFound";
 
 const ScrollToTop = () => {
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/cases" element={<Cases />} />
+          <Route path="/cx-discovery" element={<CxDiscovery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

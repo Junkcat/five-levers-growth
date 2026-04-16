@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Rocket, Brain, Factory, UserCheck, Users, GraduationCap, Lock, Target, Layers, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, Rocket, Brain, Factory, UserCheck, Users, GraduationCap, Lock, Target, Layers, TrendingUp, Zap, MousePointerClick } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const products = [
@@ -66,6 +66,16 @@ const products = [
     link: "/training",
     available: true,
     gradient: "from-primary-600 to-accent-400",
+  },
+  {
+    icon: MousePointerClick,
+    title: "CX-UX Диагностика",
+    subtitle: "Оптимизация конверсии",
+    description: "Находим узкие места в клиентских путях и воронках. Проверяем эффекты улучшений на реальных пользователях через ИИ-платформу — точность прогнозов ~90–95%.",
+    tags: ["4–6 недель", "+2–8% к конверсии", "Верификация через ИИ"],
+    link: "/cx-discovery",
+    available: true,
+    gradient: "from-accent-500 to-primary-700",
   },
 ];
 
