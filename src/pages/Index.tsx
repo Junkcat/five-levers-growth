@@ -87,6 +87,16 @@ const products = [
     available: true,
     gradient: "from-primary-700 to-accent-400",
   },
+  {
+    icon: Lock,
+    title: "Оргизменения при внедрении",
+    subtitle: "Скоро",
+    description: "Консультирование по организационным изменениям при внедрении продуктового подхода: структура команд, роли, процессы управления и преодоление сопротивления изменениям.",
+    tags: ["В разработке"],
+    link: "",
+    available: false,
+    gradient: "from-neutral-400 to-neutral-500",
+  },
 ];
 
 const stats = [
@@ -222,7 +232,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="text-5xl font-bold text-foreground mb-4">Чем мы занимаемся</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Шесть направлений — выбирайте то, что нужно прямо сейчас
+              Восемь направлений — выбирайте то, что нужно прямо сейчас
             </p>
           </div>
 
@@ -250,12 +260,18 @@ const Index = () => {
                     ))}
                   </div>
 
-                  <Button
-                    onClick={() => navigate(product.link)}
-                    className="w-full gradient-cta text-white mt-auto self-stretch"
-                  >
-                    Подробнее <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  {product.available ? (
+                    <Button
+                      onClick={() => navigate(product.link)}
+                      className="w-full gradient-cta text-white mt-auto self-stretch"
+                    >
+                      Подробнее <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  ) : (
+                    <Button disabled className="w-full mt-auto self-stretch" variant="outline">
+                      Скоро
+                    </Button>
+                  )}
                 </Card>
               );
             })}
