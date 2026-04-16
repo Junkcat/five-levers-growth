@@ -26,6 +26,8 @@ const Footer = () => {
               <li><a href="/assessment" className="hover:text-white transition-colors">Ассесмент продактов</a></li>
               <li><a href="/portfolio-processes" className="hover:text-white transition-colors">Продуктовые портфели</a></li>
               <li><a href="/training" className="hover:text-white transition-colors">Обучение команд</a></li>
+              <li><a href="/cx-discovery" className="hover:text-white transition-colors">CX-UX Диагностика</a></li>
+              <li><a href="/strategy-sessions" className="hover:text-white transition-colors">Стратегические сессии</a></li>
             </ul>
           </div>
 
