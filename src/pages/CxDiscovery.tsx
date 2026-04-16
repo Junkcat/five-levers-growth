@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, MousePointerClick, TrendingUp, BarChart3, Search, Lightbulb } from "lucide-react";
+import { ArrowRight, CheckCircle, MousePointerClick, TrendingUp, BarChart3, Search, Lightbulb, Users } from "lucide-react";
 
 const problems = [
   "Много шагов в воронке — клиенты уходят на каждом этапе, но непонятно почему",
