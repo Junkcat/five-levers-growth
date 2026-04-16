@@ -76,15 +76,15 @@ const results = [
   },
   {
     icon: BarChart3,
-    value: "−0,5–2 п.п. / +0,5–3%",
+    value: "+30%",
     label: "Рост выручки за счёт LTV и ARPU",
     desc: "Снижение оттока в ключевых сегментах и рост ARPU за счёт увеличения использования продуктов и транзакционной активности",
   },
   {
     icon: Lightbulb,
-    value: "~90–95%",
+    value: "×3 быстрее",
     label: "Прозрачный бэклог с проверенными эффектами",
-    desc: "Все точки роста в клиентских путях проверяются на платформе ValidateIdea с реальными пользователями. Точность прогнозов эффектов от внедрения — ~90–95%",
+    desc: "Все точки роста в клиентских путях проверяются на платформе ValidateIdea с реальными пользователями и получением реальных конверсий от внедрений",
   },
 ];
 
@@ -213,7 +213,7 @@ const CxDiscovery = () => {
 
       {/* Результаты */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-3">Эффект</p>
             <h2 className="text-4xl font-bold text-foreground mb-4">Измеримые результаты</h2>
@@ -221,7 +221,7 @@ const CxDiscovery = () => {
               Консервативные ориентиры — финальный эффект уточняется на данных компании
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {results.map((r, i) => {
               const Icon = r.icon;
               return (
