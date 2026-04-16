@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import ContactDialog from "@/components/ContactDialog";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, MousePointerClick, TrendingUp, Users, BarChart3, Search, Lightbulb } from "lucide-react";
+import { ArrowRight, CheckCircle, MousePointerClick, TrendingUp, BarChart3, Search, Lightbulb } from "lucide-react";
 
 const problems = [
   "Много шагов в воронке — клиенты уходят на каждом этапе, но непонятно почему",
@@ -71,26 +71,20 @@ const results = [
   {
     icon: TrendingUp,
     value: "до 4×",
-    label: "рост привлечения",
-    desc: "Оптимизация клиентских путей и воронок без разработки новых продуктов",
+    label: "Рост привлечения пользователей",
+    desc: "Повышение эффективности привлечения новых пользователей за счёт оптимизации клиентских путей и конверсионных воронок без разработки новых продуктов",
   },
   {
     icon: BarChart3,
-    value: "+2–8%",
-    label: "к конверсии",
-    desc: "Прямой прирост активных клиентов и выручки в приоритетных воронках",
-  },
-  {
-    icon: Users,
-    value: "−0,5–2 п.п.",
-    label: "отток",
-    desc: "Починка болезненных сценариев снижает отток в ключевых сегментах",
+    value: "−0,5–2 п.п. / +0,5–3%",
+    label: "Рост выручки за счёт LTV и ARPU",
+    desc: "Снижение оттока в ключевых сегментах и рост ARPU за счёт увеличения использования продуктов и транзакционной активности",
   },
   {
     icon: Lightbulb,
-    value: "+0,5–3%",
-    label: "к ARPU",
-    desc: "Рост использования продуктов и транзакционной активности",
+    value: "~90–95%",
+    label: "Прозрачный бэклог с проверенными эффектами",
+    desc: "Все точки роста в клиентских путях проверяются на платформе ValidateIdea с реальными пользователями. Точность прогнозов эффектов от внедрения — ~90–95%",
   },
 ];
 

@@ -16,6 +16,7 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cases from "./pages/Cases";
 import CxDiscovery from "./pages/CxDiscovery";
+import StrategySessions from "./pages/StrategySessions";
 import NotFound from "./pages/NotFound";
 
 const ScrollToTop = () => {
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/cx-discovery" element={<CxDiscovery />} />
+          <Route path="/strategy-sessions" element={<StrategySessions />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

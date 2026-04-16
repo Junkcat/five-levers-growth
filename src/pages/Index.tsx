@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Rocket, Brain, Factory, UserCheck, Users, GraduationCap, Lock, Target, Layers, TrendingUp, Zap, MousePointerClick } from "lucide-react";
+import { ArrowRight, Rocket, Brain, Factory, UserCheck, Users, GraduationCap, Lock, Target, Layers, TrendingUp, Zap, MousePointerClick, CalendarCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const products = [
@@ -76,6 +76,16 @@ const products = [
     link: "/cx-discovery",
     available: true,
     gradient: "from-accent-500 to-primary-700",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Стратегические сессии",
+    subtitle: "Бэклог гипотез и OKR",
+    description: "Выездное мероприятие на 5 дней для синхронизации команды: целевые сегменты, CJM, моменты истины, бэклог гипотез с unit-экономикой и операционная модель на квартал.",
+    tags: ["5 дней", "до 50 человек", "очно / выезд"],
+    link: "/strategy-sessions",
+    available: true,
+    gradient: "from-primary-700 to-accent-400",
   },
 ];
 
@@ -222,7 +232,7 @@ const Index = () => {
               return (
                 <Card
                   key={index}
-                  className="p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary-300 bg-white group relative"
+                  className="p-8 hover:shadow-xl transition-all duration-300 border-2 hover:border-primary-300 bg-white group relative flex flex-col items-start"
                 >
                   <div className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${product.gradient} mb-4 group-hover:scale-110 transition-transform`}>
                     <Icon className="h-6 w-6 text-white" />
@@ -242,7 +252,7 @@ const Index = () => {
 
                   <Button
                     onClick={() => navigate(product.link)}
-                    className="w-full gradient-cta text-white"
+                    className="w-full gradient-cta text-white mt-auto self-stretch"
                   >
                     Подробнее <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
